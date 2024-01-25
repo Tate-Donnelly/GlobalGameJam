@@ -28,13 +28,13 @@ public class LaughDetection : MonoBehaviour
     private Text hearStatus;
 
     [Header("Callbacks")]
-    private UnityEvent onLaughedDuringPunchline;
-    private UnityEvent onLaughedOutsidePunchline;
+    [SerializeField]private UnityEvent onLaughedDuringPunchline;
+    [SerializeField]private UnityEvent onLaughedOutsidePunchline;
 
     //Joke Stuff
     [Header("Joke Stuff")]
-    [SerializeField] private JokeSO testJoke;
     [SerializeField] private List<string> possibleLaughs;
+    private JokeSO currentJoke;
     private bool speechRunning;
     private bool laughedDuringPunchline;
     private float responseDelayBuffer = 0;
@@ -74,11 +74,6 @@ public class LaughDetection : MonoBehaviour
 
         recognizer.InitializationFailed.AddListener(OnError);
         recognizer.RuntimeFailed.AddListener(OnError);
-
-        if(testJoke)
-        {
-            jokeTimer = testJoke.jokeDuration;
-        }
     }
 
     private void Update()
@@ -87,6 +82,15 @@ public class LaughDetection : MonoBehaviour
         {
             jokeTimer -= Time.deltaTime;
         }
+    }
+
+    public void RunJoke(JokeSO joke)
+    {
+        currentJoke = joke;
+        UpdateStatus("");
+        jokeStartTime = DateTime.Now;
+        jokeTimer = currentJoke.jokeDuration;
+        capturedResponses = new List<CapturedPlayerResponse>();
     }
 
     private void InitializeActivityDetector()
@@ -127,20 +131,22 @@ public class LaughDetection : MonoBehaviour
         {
             if (response.responseText.Contains(laugh))
             {
-                float responseTime = (float)(jokeStartTime - response.startTime).TotalSeconds - responseDelayBuffer;
-                if (responseTime >= testJoke.punchlineRange[0] && responseTime <= testJoke.punchlineRange[1])
+                float responseTime = (float)(response.startTime - jokeStartTime).TotalSeconds - responseDelayBuffer;
+                if (responseTime >= currentJoke.punchlineRange[0] && responseTime <= currentJoke.punchlineRange[1])
                 {
                     laughedDuringPunchline = true;
                     onLaughedDuringPunchline?.Invoke();
                 }
 
-                if (responseTime < testJoke.punchlineRange[0] || responseTime > testJoke.punchlineRange[1])
+                if (responseTime < currentJoke.punchlineRange[0] || responseTime > currentJoke.punchlineRange[1])
                 {
                     laughedDuringPunchline = false;
                     onLaughedOutsidePunchline?.Invoke();
                 }
+                return;
             }
         }
+        onLaughedOutsidePunchline?.Invoke();
     }
 
     private void UpdateStatus(string text)
@@ -158,14 +164,6 @@ public class LaughDetection : MonoBehaviour
     {
         _recognizedText.Append(result);
         UpdateStatus(_recognizedText.CurrentText);
-    }
-
-    public void OnJokeStarted()
-    {
-        //Begin Processing
-        UpdateStatus("");
-        jokeStartTime = DateTime.Now;
-        capturedResponses = new List<CapturedPlayerResponse>();
     }
 
     private void OnError(SpeechProcessorException exception)
