@@ -27,6 +27,9 @@ namespace Recognissimo.Samples.SpeechRecognizerExample
         [SerializeField]
         private InputField status;
 
+        [SerializeField]
+        private Text hearingStatus;
+
         private readonly RecognizedText _recognizedText = new();
 
         private List<SystemLanguage> _availableLanguages;
@@ -98,6 +101,8 @@ namespace Recognissimo.Samples.SpeechRecognizerExample
 
         private void InitializeLanguageDropdown()
         {
+            if (languageDropdown == null) return;
+
             // Fill dropdown with available languages.
             languageDropdown.options = _availableLanguages
                 .Select(language => new Dropdown.OptionData {text = language.ToString()})
