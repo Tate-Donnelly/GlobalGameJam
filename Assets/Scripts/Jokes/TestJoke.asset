@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jokeString: Why did the chicken cross the road? To get to the other side.
   punchlineString: To get to the other side.
-  jokeDuration: 3.5
+  jokeDuration: 7
   punchlineBufferTime: 1
-  punchlineRange: {x: 2.7, y: 3.5}
+  punchlineRange: {x: 3.5, y: 7}
   jokeClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
