@@ -27,7 +27,7 @@
             "bindings": [
                 {
                     "name": "2D Vector",
-                    "id": "6028cae8-9ce7-4ca2-ade8-9f3878e4d55b",
+                    "id": "550c2457-2ec9-4459-99e2-ad20ba15f461",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -38,55 +38,55 @@
                 },
                 {
                     "name": "up",
-                    "id": "884fb2f4-5c11-47b1-81a7-d9362b15d4a5",
+                    "id": "2c35753b-3e84-43c7-8510-f92af9a2e288",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Default",
+                    "groups": "",
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "e4150101-0ecb-41f4-b779-8884a55e1736",
+                    "id": "4e2a492c-9473-4382-a4ac-150380030092",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Default",
+                    "groups": "",
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "9f119c26-5808-414c-bf14-615c6520a085",
+                    "id": "8413b157-322f-4840-a2d9-0bc6b8b95350",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Default",
+                    "groups": "",
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "04b51ce3-a4ec-4a66-9a81-8a97d6e6ea52",
+                    "id": "a7ca3840-b121-47c7-8dbd-e47da5f12e0f",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Default",
+                    "groups": "",
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "6fd7301a-4c95-4e45-bcdc-57b997f4c4ac",
-                    "path": "<Mouse>/position",
+                    "id": "104a0c90-5c09-40dd-9021-9a8f374bce92",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Default",
+                    "groups": "",
                     "action": "look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -98,7 +98,18 @@
         {
             "name": "Default",
             "bindingGroup": "Default",
-            "devices": []
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }
