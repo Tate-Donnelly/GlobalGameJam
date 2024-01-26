@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Parts")]
     [SerializeField] 
-    // private Rigidbody rigidBody;
     private CharacterController controller;
     
     [SerializeField] 
@@ -48,10 +47,6 @@ public class PlayerController : MonoBehaviour
 
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    void FixedUpdate() {
-        // rigidBody.velocity = (transform.right * localVelocity.x) + (transform.forward * localVelocity.y); 
     }
 
     void Update() {
