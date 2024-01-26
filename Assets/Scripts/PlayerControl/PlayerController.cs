@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
         
         var cam_euler = cam.eulerAngles + (Vector3.right * -delta.y * sensitivity);
         if (cam_euler.x > 180) cam_euler.x -= 360;
-        Debug.Log(cam_euler.x);
         cam_euler.x = Mathf.Clamp(cam_euler.x, -90, 90);
         cam.rotation = Quaternion.Euler(cam_euler);
     }
