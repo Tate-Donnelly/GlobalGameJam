@@ -6,17 +6,31 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Params")]
-    [SerializeField] float playerSpeed;
-    [SerializeField] float sensitivity;
-    [SerializeField] float baseHeadHeight;
-    [SerializeField] float headBobAmplitude;
-    [SerializeField] float headBobFrequency;
+    [SerializeField] 
+    private float playerSpeed;
+    
+    [SerializeField] 
+    private float sensitivity;
+    
+    [SerializeField] 
+    private float baseHeadHeight;
+    
+    [SerializeField] 
+    private float headBobAmplitude;
+    
+    [SerializeField] 
+    float headBobFrequency;
 
     [Header("Player Parts")]
-    [SerializeField] Rigidbody rigidBody;
-    [SerializeField] Transform cam;    
+    [SerializeField] 
+    // private Rigidbody rigidBody;
+    private CharacterController controller;
+    
+    [SerializeField] 
+    private Transform cam;    
 
-    Vector2 localVelocity;
+    private Vector2 localVelocity;
+    private float gravity;
 
     public void OnMove(InputAction.CallbackContext context) {
         localVelocity = context.ReadValue<Vector2>() * playerSpeed;
@@ -36,9 +50,16 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    void FixedUpdate() {
+        // rigidBody.velocity = (transform.right * localVelocity.x) + (transform.forward * localVelocity.y); 
+    }
+
     void Update() {
         // Applying the relative velocity
-        rigidBody.velocity = (transform.right * localVelocity.x) + (transform.forward * localVelocity.y); 
+        gravity = controller.isGrounded ? 0 : gravity - 9.81f * Time.smoothDeltaTime;
+        controller.Move((transform.right * localVelocity.x) + 
+                        (transform.forward * localVelocity.y) + 
+                        (transform.up * gravity));
 
         // Head bobbing
         var cam_local_pos = cam.localPosition;
