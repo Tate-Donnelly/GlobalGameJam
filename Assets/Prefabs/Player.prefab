@@ -128,7 +128,7 @@ Transform:
   m_Children:
   - {fileID: 5561083590199137269}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7003139878272356637
 MeshFilter:
@@ -244,6 +244,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 5
   sensitivity: 0.5
+  baseHeadHeight: 0.5
+  headBobAmplitude: 0.1
+  headBobFrequency: 10
   rigidBody: {fileID: 4382247957856173307}
   cam: {fileID: 5561083590199137269}
 --- !u!114 &7564429107031545497

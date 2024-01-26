@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Params")]
     [SerializeField] float playerSpeed;
     [SerializeField] float sensitivity;
+    [SerializeField] float baseHeadHeight;
+    [SerializeField] float headBobAmplitude;
+    [SerializeField] float headBobFrequency;
 
     [Header("Player Parts")]
     [SerializeField] Rigidbody rigidBody;
@@ -22,10 +25,9 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context) {
         var delta = context.ReadValue<Vector2>();
         transform.rotation = Quaternion.Euler(transform.eulerAngles + (Vector3.up * delta.x * sensitivity));
-        
+    
         var cam_euler = cam.eulerAngles + (Vector3.right * -delta.y * sensitivity);
         if (cam_euler.x > 180) cam_euler.x -= 360;
-        Debug.Log(cam_euler.x);
         cam_euler.x = Mathf.Clamp(cam_euler.x, -90, 90);
         cam.rotation = Quaternion.Euler(cam_euler);
     }
@@ -35,6 +37,14 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
-       rigidBody.velocity = (transform.right * localVelocity.x) + (transform.forward * localVelocity.y);
+        // Applying the relative velocity
+        rigidBody.velocity = (transform.right * localVelocity.x) + (transform.forward * localVelocity.y); 
+
+        // Head bobbing
+        var cam_local_pos = cam.localPosition;
+        if (localVelocity != Vector2.zero || Mathf.Abs(cam_local_pos.y - baseHeadHeight) > 0.01 ) {
+            cam_local_pos.y = baseHeadHeight + headBobAmplitude * Mathf.Sin(headBobFrequency * Time.unscaledTime); 
+        }
+        cam.localPosition = cam_local_pos;
     }
 }
