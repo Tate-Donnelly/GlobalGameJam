@@ -32,7 +32,6 @@ public class FlagSystem : MonoBehaviour
         if(flagsNotified.Contains(flag)) return;
         flagsNotified.Add(flag);
         OnFlagNotified?.Invoke(this, new FlagArgs(flag));
-        Debug.Log("Flag notified " + flag.ToString());
     }
 
     void Start()
