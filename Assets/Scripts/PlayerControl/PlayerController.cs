@@ -52,12 +52,15 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update() {
-        // Applying the relative velocity
+    void FixedUpdate() {
         gravity = controller.isGrounded ? 0 : gravity - gravityForce * Time.smoothDeltaTime;
         controller.Move((transform.right * localVelocity.x) + 
-                        (transform.forward * localVelocity.y) + 
-                        (transform.up * gravity));
+                (transform.forward * localVelocity.y) + 
+                (transform.up * gravity));
+    }
+
+    void Update() {
+        // Applying the relative velocity
 
         // Head bobbing
         var cam_local_pos = cam.localPosition;
