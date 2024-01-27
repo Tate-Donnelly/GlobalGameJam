@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum PuzzleFlag {
    UNTIE,
@@ -17,10 +18,15 @@ public class FlagArgs : EventArgs {
     }
 }
 
+[Serializable]
+public class FlagUnityEvent : UnityEvent<FlagArgs> {}
+
 public class FlagSystem : MonoBehaviour
 {
     public static FlagSystem instance {get; private set;}
     public static event EventHandler<FlagArgs> OnFlagNotified; 
+
+    public FlagUnityEvent OnFlagNotifiedUnityEvent;
 
     private HashSet<PuzzleFlag> flagsNotified;
 
@@ -31,10 +37,12 @@ public class FlagSystem : MonoBehaviour
     private void notifyFlag(PuzzleFlag flag) {
         if(flagsNotified.Contains(flag)) return;
         flagsNotified.Add(flag);
-        OnFlagNotified?.Invoke(this, new FlagArgs(flag));
+        var flagArgs = new FlagArgs(flag);
+        OnFlagNotified?.Invoke(this, flagArgs);
+        OnFlagNotifiedUnityEvent?.Invoke(flagArgs);
     }
 
-    void Start()
+    void Awake()
     {
         if (instance != null)
             Destroy(gameObject);
