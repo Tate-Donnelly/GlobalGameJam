@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,33 +34,6 @@ public class PlayerController : MonoBehaviour
     private float gravity;
     private float scaledPlayerSpeed;
     private float scaledGravityForce;
-
-    public void OnMove(InputAction.CallbackContext context) {
-        localVelocity = context.ReadValue<Vector2>() * scaledPlayerSpeed;
-    }
-
-    public void OnLook(InputAction.CallbackContext context) {
-        var delta = context.ReadValue<Vector2>();
-        transform.rotation = Quaternion.Euler(transform.eulerAngles + (Vector3.up * delta.x * sensitivity));
-    
-        var cam_euler = cam.eulerAngles + (Vector3.right * -delta.y * sensitivity);
-        if (cam_euler.x > 180) cam_euler.x -= 360;
-        cam_euler.x = Mathf.Clamp(cam_euler.x, -90, 90);
-        cam.rotation = Quaternion.Euler(cam_euler);
-    }
-
-    public void OnInteract(InputAction.CallbackContext context)
-    {
-        Ray ray = new Ray(cam.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 20);
-        RaycastHit hitData;
-        if (Physics.Raycast(ray, out hitData))
-        {
-            if(hitData.collider.tag == "Interactable")
-            {
-                hitData.collider.GetComponent<IInteractable>().InteractAction();
-            }
-        }
-    }
 
     private void Awake()
     {
