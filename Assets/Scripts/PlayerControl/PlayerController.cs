@@ -29,6 +29,23 @@ public class PlayerController : MonoBehaviour
         cam.rotation = Quaternion.Euler(cam_euler);
     }
 
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+
+        Ray ray = new Ray(cam.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 20);
+        RaycastHit hitData;
+        if (Physics.Raycast(ray, out hitData))
+        {
+            if(hitData.collider.tag == "Interactable")
+            {
+                // Do something
+                //Debug.Log(hitData.collider.name);
+                hitData.collider.GetComponent<IInteractable>().InteractAction();
+            }
+        }
+    }
+
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
     }

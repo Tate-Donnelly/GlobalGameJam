@@ -9,10 +9,10 @@ public class FlickerLights : MonoBehaviour
     private const string EMISSIVE_KEYWORD = "_EMISSION";
 
     [SerializeField] Renderer rend;
-    [SerializeField] Color emColor;
     private List<Material> materials = new();
     private List<Color> initialColors = new();
 
+    [Header("Flicker Params")]
     [SerializeField] private bool flicker;
     [SerializeField] [Min(0)] private float flickerSpeed = 1f;
     [SerializeField] private AnimationCurve brightnessCurve;
@@ -46,9 +46,7 @@ public class FlickerLights : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        emColor = GetComponent<Renderer>().material.GetColor("_EmissionColor");
         rend = GetComponent<Renderer>();
-        Debug.Log(emColor);
     }
 
     // Update is called once per frame
