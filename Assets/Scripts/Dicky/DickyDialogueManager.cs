@@ -19,8 +19,8 @@ namespace Dicky
         [SerializeField] private List<JokeSO> _usedJokes = new List<JokeSO>();
         
         //Internal
-        private AudioSource dlgAudioSource;
-        private JokeSO _currentJokeData;
+        [SerializeField] private AudioSource dlgAudioSource;
+        private DialogueSO _currentDialogueData;
         private float dialogueTimer;
         private float laughterTimer;
         private bool didLaugh;
@@ -28,11 +28,21 @@ namespace Dicky
         
         private void Awake()
         {
-            dlgAudioSource = GetComponent<AudioSource>();
-            
             //Event Subscribing
-            _laughDetection.onLaughedDuringPunchline.AddListener(delegate { HeardLaughter(); });
-            _laughDetection.onLaughedOutsidePunchline.AddListener(delegate { ReactToPlayer(Reaction.LaughedOutsideOfPunchline); });
+            _laughDetection.onLaughedDuringPunchline.AddListener(delegate
+            {
+                print("HeardLaughter");
+                HeardLaughter();
+            });
+            _laughDetection.onLaughedOutsidePunchline.AddListener(delegate
+            {
+                print("ReactToPlayer");
+                ReactToPlayer(Reaction.LaughedOutsideOfPunchline);
+            });
+
+            _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
+
+            PlayJoke();
         }
 
         private void Update()
@@ -57,14 +67,16 @@ namespace Dicky
             PlayJoke();
         }
 
-        private void PlayJoke()
+        public void PlayJoke()
         {
             GetRandomJoke();
             
-            _dialogueRunner.StartDialogue(_currentJokeData.yarnNodeName);
-            dlgAudioSource.clip=_currentJokeData.dialogueClip;
-            dialogueTimer = _currentJokeData.dialogueDuration;
-            _laughDetection.RunJoke(_currentJokeData);
+            _dialogueRunner.StartDialogue(_currentDialogueData.yarnNodeName);
+            dlgAudioSource.clip=_currentDialogueData.dialogueClip;
+            dialogueTimer = _currentDialogueData.dialogueDuration;
+            
+            _laughDetection.RunJoke(_currentDialogueData);
+            dlgAudioSource.Play();
         }
 
         /// <summary>
@@ -73,34 +85,41 @@ namespace Dicky
         /// </summary>
         private void GetRandomJoke()
         {
-            if (_unusedJokes.Count == 0)
-            {
-                _unusedJokes = _usedJokes;
-                _usedJokes.Clear();
-            }
-            
             Random rand = new Random();
             int index = rand.Next(0, _unusedJokes.Count);
-            _currentJokeData = _unusedJokes[index];
-            _unusedJokes.Remove(_currentJokeData);
-            _usedJokes.Add(_currentJokeData);
+            _currentDialogueData = _unusedJokes[index];
+            if (_unusedJokes.Count == 1)
+            {
+                _unusedJokes.AddRange(_usedJokes);
+                _usedJokes.Clear();
+            }
         }
 
         [YarnCommand("Punchline")]
-        private void WaitForLaughter()
+        private void Punchline()
         {
-            _laughDetection.DeliveredPunchline();
+            _laughDetection.punchlineDelivered = true;
         }
         
         public void ReactToPlayer(Reaction reaction)
         {
+            
             dlgAudioSource.Stop();
             _dialogueRunner.Stop();
             //Get dialogue based on reaction
+            _currentDialogueData = _reactionsToPlayer[reaction].Dequeue();
         }
 
         private void EndDialogueClip()
         {
+            _unusedJokes.Remove(_currentDialogueData as JokeSO);
+            _usedJokes.Add(_currentDialogueData as JokeSO);
+            if (_unusedJokes.Count == 0)
+            {
+                _unusedJokes = _usedJokes;
+                print("New count: "+_unusedJokes.Count);
+                _usedJokes.Clear();
+            }
             dlgAudioSource.Stop();
             _dialogueRunner.Stop();
             PlayJoke();
