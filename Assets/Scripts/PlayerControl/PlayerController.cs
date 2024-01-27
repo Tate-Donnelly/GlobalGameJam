@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         FlagSystem.OnFlagNotified += OnSpotlightSwitchedOn;
+        QualitySettings.vSyncCount = 1;
     }
 
     void Start() {
@@ -76,6 +77,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
         gravity = controller.isGrounded ? 0 : gravity - scaledGravityForce;
+
+        controller.Move((transform.right * localVelocity.x) +
+            (transform.forward * localVelocity.y) +
+            (transform.up * gravity));
     }
 
     void Update() {
@@ -87,9 +92,7 @@ public class PlayerController : MonoBehaviour
         }
         cam.localPosition = cam_local_pos;
 
-        controller.Move((transform.right * localVelocity.x) +
-                (transform.forward * localVelocity.y) +
-                (transform.up * gravity));
+
     }
 
     private void OnSpotlightSwitchedOn(object sender, FlagArgs flagArgs)
