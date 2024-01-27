@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public enum PuzzleFlag {
+   SWITCH,
    UNTIE,
    SANDBAG,
    KEY
@@ -38,6 +39,7 @@ public class FlagSystem : MonoBehaviour
         if(flagsNotified.Contains(flag)) return;
         flagsNotified.Add(flag);
         var flagArgs = new FlagArgs(flag);
+        Debug.Log("Here");
         OnFlagNotified?.Invoke(this, flagArgs);
         OnFlagNotifiedUnityEvent?.Invoke(flagArgs);
     }

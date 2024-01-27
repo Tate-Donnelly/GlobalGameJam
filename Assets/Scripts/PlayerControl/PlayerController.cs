@@ -52,32 +52,30 @@ public class PlayerController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (!context.started) return;
-
         Ray ray = new Ray(cam.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 20);
         RaycastHit hitData;
         if (Physics.Raycast(ray, out hitData))
         {
             if(hitData.collider.tag == "Interactable")
             {
-                // Do something
-                //Debug.Log(hitData.collider.name);
                 hitData.collider.GetComponent<IInteractable>().InteractAction();
             }
         }
     }
 
+    private void Awake()
+    {
+        FlagSystem.OnFlagNotified += OnSpotlightSwitchedOn;
+    }
+
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
-        scaledPlayerSpeed = playerSpeed / 100;
+        scaledPlayerSpeed = playerSpeed/100;
         scaledGravityForce = gravityForce / 1000;
     }
 
     void FixedUpdate() {
         gravity = controller.isGrounded ? 0 : gravity - scaledGravityForce;
-        controller.Move((transform.right * localVelocity.x) + 
-                (transform.forward * localVelocity.y) + 
-                (transform.up * gravity));
     }
 
     void Update() {
@@ -88,5 +86,15 @@ public class PlayerController : MonoBehaviour
             cam_local_pos.y = baseHeadHeight + headBobAmplitude * Mathf.Sin(headBobFrequency * Time.unscaledTime); 
         }
         cam.localPosition = cam_local_pos;
+
+        controller.Move((transform.right * localVelocity.x) +
+                (transform.forward * localVelocity.y) +
+                (transform.up * gravity));
+    }
+
+    private void OnSpotlightSwitchedOn(object sender, FlagArgs flagArgs)
+    {
+        if (flagArgs.flag != PuzzleFlag.SWITCH) return;
+        scaledPlayerSpeed = playerSpeed / 100;
     }
 }
