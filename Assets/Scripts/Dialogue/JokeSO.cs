@@ -7,5 +7,4 @@ using UnityEngine;
 public class JokeSO : DialogueSO
 {
     public float punchlineBufferTime = 1;
-    public Vector2 punchlineRange = Vector2.zero;
 }

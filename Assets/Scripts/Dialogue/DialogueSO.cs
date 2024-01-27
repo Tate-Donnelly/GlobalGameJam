@@ -2,7 +2,7 @@
 
 namespace Dialogue
 {
-    [CreateAssetMenu(fileName = "JokeData", menuName = "Dialogue/dialogue", order = 1)]
+    [CreateAssetMenu(fileName = "JokeData", menuName = "Dialogue/Dialogue", order = 1)]
     public class DialogueSO : ScriptableObject
     {
         public string yarnNodeName;

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: TestJoke 1
   m_EditorClassIdentifier: 
   yarnNodeName: TEST1
-  dialogueDuration: 7
+  dialogueDuration: 15
   dialogueClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
-  punchlineBufferTime: 1
-  punchlineRange: {x: 3.5, y: 7}
+  punchlineBufferTime: 5

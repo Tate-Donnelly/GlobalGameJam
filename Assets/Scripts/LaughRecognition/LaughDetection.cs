@@ -90,10 +90,9 @@ public class LaughDetection : MonoBehaviour
         }
     }
     
-    public void RunJoke(JokeSO joke)
+    public void RunPunchline(JokeSO joke)
     {
         currentJoke = joke;
-        UpdateStatus("");
         punchlineStartTime = DateTime.Now;
         punchlineTimer = currentJoke.punchlineBufferTime;
         capturedResponses = new List<CapturedPlayerResponse>();
@@ -103,16 +102,13 @@ public class LaughDetection : MonoBehaviour
     {
         activityDetector.TimeoutMs = 0;
         activityDetector.Spoke.AddListener(() => {
-            //hearStatus.text = "<color=green>Speech</color>";
             if(!speechRunning)
             {
-                UpdateStatus("Laugh!");
                 speechRunning = true;
                 currentResponse = new CapturedPlayerResponse(DateTime.Now);
             }
         });
         activityDetector.Silenced.AddListener(() => {
-            //hearStatus.text = "<color=red>Silence</color>";
             if (speechRunning)
             {
                 if (currentResponse != null)
@@ -123,19 +119,12 @@ public class LaughDetection : MonoBehaviour
                     CheckIfLaugh(currentResponse);
                 }
                 _recognizedText.Clear();
-                UpdateStatus("");
                 speechRunning = false;
             }
         });
-        //activityDetector.InitializationFailed.AddListener(e => hearStatus.text = e.Message);
         activityDetector.StartProcessing();
     }
     
-    public void DeliveredPunchline()
-    {
-        print("Delivered punchline");
-        //jokeStartTime = currentJoke.dialogueDuration;
-    }
 
 
     private void CheckIfLaugh(CapturedPlayerResponse response)
