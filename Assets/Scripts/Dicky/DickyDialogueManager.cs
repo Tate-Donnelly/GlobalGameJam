@@ -38,7 +38,6 @@ namespace Dicky
             });
             _laughDetection.onLaughedOutsidePunchline.AddListener(delegate
             {
-                print("Laughed too early");
                 StartCoroutine(WaitForJokeToEnd(Reaction.LaughedOutsideOfPunchline));
             });
 
@@ -85,7 +84,6 @@ namespace Dicky
 
         private void PlayDialogue(DialogueSO dialogueSo)
         {
-            if (_dialogueRunner.IsDialogueRunning) return;
             _currentDialogueData = dialogueSo;
             _dialogueRunner.StartDialogue(dialogueSo.yarnNodeName);
             dlgAudioSource.clip=dialogueSo.dialogueClip;
