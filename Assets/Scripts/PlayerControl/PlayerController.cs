@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     float headBobFrequency;
 
+    [SerializeField]
+    private float gravityForce;
+
     [Header("Player Parts")]
     [SerializeField] 
     private CharacterController controller;
@@ -51,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     void Update() {
         // Applying the relative velocity
-        gravity = controller.isGrounded ? 0 : gravity - 9.81f * Time.smoothDeltaTime;
+        gravity = controller.isGrounded ? 0 : gravity - gravityForce * Time.smoothDeltaTime;
         controller.Move((transform.right * localVelocity.x) + 
                         (transform.forward * localVelocity.y) + 
                         (transform.up * gravity));

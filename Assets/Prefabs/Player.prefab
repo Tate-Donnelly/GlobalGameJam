@@ -220,6 +220,7 @@ MonoBehaviour:
   baseHeadHeight: 0.5
   headBobAmplitude: 0.1
   headBobFrequency: 10
+  gravityForce: 2
   controller: {fileID: 8084309005357315216}
   cam: {fileID: 5561083590199137269}
 --- !u!114 &7564429107031545497
