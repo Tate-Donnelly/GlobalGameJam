@@ -6,23 +6,44 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Params")]
-    [SerializeField] float playerSpeed;
-    [SerializeField] float sensitivity;
+    [SerializeField] 
+    private float playerSpeed;
+    
+    [SerializeField] 
+    private float sensitivity;
+    
+    [SerializeField] 
+    private float baseHeadHeight;
+    
+    [SerializeField] 
+    private float headBobAmplitude;
+    
+    [SerializeField] 
+    float headBobFrequency;
+
+    [SerializeField]
+    private float gravityForce;
 
     [Header("Player Parts")]
-    [SerializeField] Rigidbody rigidBody;
-    [SerializeField] Transform cam;    
+    [SerializeField] 
+    private CharacterController controller;
+    
+    [SerializeField] 
+    private Transform cam;    
 
-    Vector2 localVelocity;
+    private Vector2 localVelocity;
+    private float gravity;
+    private float scaledPlayerSpeed;
+    private float scaledGravityForce;
 
     public void OnMove(InputAction.CallbackContext context) {
-        localVelocity = context.ReadValue<Vector2>() * playerSpeed;
+        localVelocity = context.ReadValue<Vector2>() * scaledPlayerSpeed;
     }
 
     public void OnLook(InputAction.CallbackContext context) {
         var delta = context.ReadValue<Vector2>();
         transform.rotation = Quaternion.Euler(transform.eulerAngles + (Vector3.up * delta.x * sensitivity));
-        
+    
         var cam_euler = cam.eulerAngles + (Vector3.right * -delta.y * sensitivity);
         if (cam_euler.x > 180) cam_euler.x -= 360;
         cam_euler.x = Mathf.Clamp(cam_euler.x, -90, 90);
@@ -48,9 +69,24 @@ public class PlayerController : MonoBehaviour
 
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
+        scaledPlayerSpeed = playerSpeed / 100;
+        scaledGravityForce = gravityForce / 1000;
+    }
+
+    void FixedUpdate() {
+        gravity = controller.isGrounded ? 0 : gravity - scaledGravityForce;
+        controller.Move((transform.right * localVelocity.x) + 
+                (transform.forward * localVelocity.y) + 
+                (transform.up * gravity));
     }
 
     void Update() {
-       rigidBody.velocity = (transform.right * localVelocity.x) + (transform.forward * localVelocity.y);
+        // Applying the relative velocity
+        // Head bobbing
+        var cam_local_pos = cam.localPosition;
+        if (localVelocity != Vector2.zero || Mathf.Abs(cam_local_pos.y - baseHeadHeight) > 0.01 ) {
+            cam_local_pos.y = baseHeadHeight + headBobAmplitude * Mathf.Sin(headBobFrequency * Time.unscaledTime); 
+        }
+        cam.localPosition = cam_local_pos;
     }
 }
