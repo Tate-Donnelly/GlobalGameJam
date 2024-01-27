@@ -104,7 +104,6 @@ GameObject:
   - component: {fileID: 7003139878272356637}
   - component: {fileID: 4930574326690202462}
   - component: {fileID: 2498865246847556452}
-  - component: {fileID: 4382247957856173307}
   - component: {fileID: 8532636752088221002}
   - component: {fileID: 7564429107031545497}
   m_Layer: 6
@@ -203,33 +202,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4382247957856173307
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8958000319674775305}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!114 &8532636752088221002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,9 +214,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade871c5fae7aae80b7ae4413e221332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
   sensitivity: 0.5
-  rigidBody: {fileID: 4382247957856173307}
+  baseHeadHeight: 0.5
+  headBobAmplitude: 0.1
+  headBobFrequency: 10
+  gravityForce: 10
+  controller: {fileID: 8084309005357315216}
   cam: {fileID: 5561083590199137269}
 --- !u!114 &7564429107031545497
 MonoBehaviour:
@@ -308,3 +284,29 @@ MonoBehaviour:
   m_DefaultActionMap: gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 6194867034839822391}
+--- !u!143 &8084309005357315216
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958000319674775305}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.2
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
