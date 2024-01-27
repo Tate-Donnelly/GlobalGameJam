@@ -544,7 +544,8 @@ public class AkPluginActivator
 					if (!BuildTargetToPlatformConfiguration.TryGetValue(UnityEditor.BuildTarget.StandaloneWindows64, out platformConfiguration))
 						platformConfiguration = null;
 					break;
-			}
+
+            }
 
 			var AssetChanged = false;
 			if (pluginImporter.GetCompatibleWithAnyPlatform())
