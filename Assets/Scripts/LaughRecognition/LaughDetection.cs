@@ -21,15 +21,15 @@ public class LaughDetection : MonoBehaviour
     [SerializeField]
     private StreamingAssetsLanguageModelProvider languageModelProvider;
 
-    [SerializeField]
+    /*[SerializeField]
     private InputField status;
 
     [SerializeField]
-    private Text hearStatus;
+    private Text hearStatus;*/
 
     [Header("Callbacks")]
-    [SerializeField]private UnityEvent onLaughedDuringPunchline;
-    [SerializeField]private UnityEvent onLaughedOutsidePunchline;
+    [SerializeField] public UnityEvent onLaughedDuringPunchline;
+    [SerializeField] public UnityEvent onLaughedOutsidePunchline;
 
     //Joke Stuff
     [Header("Joke Stuff")]
@@ -84,12 +84,17 @@ public class LaughDetection : MonoBehaviour
         }
     }
 
+    public void DeliveredPunchline()
+    {
+        
+    }
+
     public void RunJoke(JokeSO joke)
     {
         currentJoke = joke;
         UpdateStatus("");
         jokeStartTime = DateTime.Now;
-        jokeTimer = currentJoke.jokeDuration;
+        jokeTimer = currentJoke.dialogueDuration;
         capturedResponses = new List<CapturedPlayerResponse>();
     }
 
@@ -97,7 +102,7 @@ public class LaughDetection : MonoBehaviour
     {
         activityDetector.TimeoutMs = 0;
         activityDetector.Spoke.AddListener(() => {
-            hearStatus.text = "<color=green>Speech</color>";
+            //hearStatus.text = "<color=green>Speech</color>";
             if(!speechRunning)
             {
                 UpdateStatus("Laugh!");
@@ -106,7 +111,7 @@ public class LaughDetection : MonoBehaviour
             }
         });
         activityDetector.Silenced.AddListener(() => {
-            hearStatus.text = "<color=red>Silence</color>";
+            //hearStatus.text = "<color=red>Silence</color>";
             if (speechRunning)
             {
                 if (currentResponse != null)
@@ -121,7 +126,7 @@ public class LaughDetection : MonoBehaviour
                 speechRunning = false;
             }
         });
-        activityDetector.InitializationFailed.AddListener(e => hearStatus.text = e.Message);
+        //activityDetector.InitializationFailed.AddListener(e => hearStatus.text = e.Message);
         activityDetector.StartProcessing();
     }
 
@@ -151,7 +156,7 @@ public class LaughDetection : MonoBehaviour
 
     private void UpdateStatus(string text)
     {
-        status.text = text;
+        //status.text = text;
     }
 
     private void OnPartialResult(PartialResult partial)

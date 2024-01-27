@@ -32,9 +32,9 @@ public class PlayDialogue : MonoBehaviour
     public void RunJoke(JokeSO joke)
     {
         dlgAudioSource.Stop();
-        dialogueText.text = joke.jokeString;
-        dlgAudioSource.clip = joke.jokeClip;
-        jokeTimer = joke.jokeDuration;
+        dialogueText.text = joke.yarnNodeName;
+        dlgAudioSource.clip = joke.dialogueClip;
+        jokeTimer = joke.dialogueDuration;
         dlgAudioSource.Play();
     }
 

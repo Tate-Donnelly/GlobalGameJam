@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
   m_Name: TestJoke
   m_EditorClassIdentifier: 
-  jokeString: Why did the chicken cross the road? To get to the other side.
-  punchlineString: To get to the other side.
-  jokeDuration: 7
+  yarnNodeName: 
+  dialogueDuration: 0
+  dialogueClip: {fileID: 0}
+  jokeName: 
+  dialogueDuration: 0
   punchlineBufferTime: 1
   punchlineRange: {x: 3.5, y: 7}
   jokeClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
