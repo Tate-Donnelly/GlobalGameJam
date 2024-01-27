@@ -47,7 +47,6 @@ public class LaughDetection : MonoBehaviour
 
     //Timer
     private float punchlineTimer;
-    private DateTime punchlineStartTime;
 
     //Responses
     private CapturedPlayerResponse currentResponse = null;
@@ -63,23 +62,15 @@ public class LaughDetection : MonoBehaviour
 
         // Set default language.
         languageModelProvider.language = SystemLanguage.English;
-        UpdateStatus("");
         InitializeActivityDetector();
 
         // Bind recognizer to event handlers.
         recognizer.Started.AddListener(() =>
         {
             _recognizedText.Clear();
-            UpdateStatus("");
         });
 
         recognizer.Finished.AddListener(() => Debug.Log("Finished"));
-
-        recognizer.PartialResultReady.AddListener(OnPartialResult);
-        recognizer.ResultReady.AddListener(OnResult);
-
-        recognizer.InitializationFailed.AddListener(OnError);
-        recognizer.RuntimeFailed.AddListener(OnError);
     }
 
     private void Update()
@@ -93,7 +84,6 @@ public class LaughDetection : MonoBehaviour
     public void RunPunchline(JokeSO joke)
     {
         currentJoke = joke;
-        punchlineStartTime = DateTime.Now;
         punchlineTimer = currentJoke.punchlineBufferTime;
         capturedResponses = new List<CapturedPlayerResponse>();
     }
@@ -133,10 +123,8 @@ public class LaughDetection : MonoBehaviour
         {
             if (response.responseText.Contains(laugh))
             {
-                print("HeardLaughter");
                 if (punchlineDelivered)
                 {
-                    print("Punchline");
                     punchlineDelivered = false;
                     laughedDuringPunchline = true;
                     onLaughedDuringPunchline?.Invoke();
@@ -170,28 +158,7 @@ public class LaughDetection : MonoBehaviour
             onLaughedOutsidePunchline?.Invoke();
         }
     }
-
-    private void UpdateStatus(string text)
-    {
-        //status.text = text;
-    }
-
-    private void OnPartialResult(PartialResult partial)
-    {
-        _recognizedText.Append(partial);
-        UpdateStatus(_recognizedText.CurrentText);
-    }
-
-    private void OnResult(Result result)
-    {
-        _recognizedText.Append(result);
-        UpdateStatus(_recognizedText.CurrentText);
-    }
-
-    private void OnError(SpeechProcessorException exception)
-    {
-        UpdateStatus($"<color=red>{exception.Message}</color>");
-    }
+    
 
     /// <summary>
     ///     Helper class that accumulates recognition results.
