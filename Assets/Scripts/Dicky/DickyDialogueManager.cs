@@ -75,7 +75,7 @@ namespace Dicky
             dlgAudioSource.clip=_currentDialogueData.dialogueClip;
             dialogueTimer = _currentDialogueData.dialogueDuration;
             
-            _laughDetection.RunJoke(_currentDialogueData);
+            _laughDetection.RunJoke(_currentDialogueData as JokeSO);
             dlgAudioSource.Play();
         }
 
