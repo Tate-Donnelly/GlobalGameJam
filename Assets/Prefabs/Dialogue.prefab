@@ -442,7 +442,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   typewriterEffectSpeed: 120
-  continueButton: {fileID: 5756265306821081892}
+  continueButton: {fileID: 0}
   holdTime: 1
   autoAdvance: 0
   palette: {fileID: 0}
@@ -475,8 +475,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 20
     m_Right: 60
-    m_Top: 25
-    m_Bottom: 50
+    m_Top: 30
+    m_Bottom: 75
   m_ChildAlignment: 7
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
