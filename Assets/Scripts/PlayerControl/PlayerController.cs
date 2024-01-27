@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
     private float scaledPlayerSpeed;
     private float scaledGravityForce;
 
+    private Tool[] inventory = { new Tool("Hand"), new Tool("Hand"), new Tool("Hand"), new Tool("Hand")};
+    private int activeTool = 0;
+
     public void OnMove(InputAction.CallbackContext context) {
         localVelocity = context.ReadValue<Vector2>() * scaledPlayerSpeed;
     }
@@ -63,6 +66,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnInventory0(InputAction.CallbackContext context)
+    {
+        activeTool = 0;
+        UIManager.Instance.HighlightInventory(activeTool);
+    }
+
+    public void OnInventory1(InputAction.CallbackContext context)
+    {
+        activeTool = 1;
+        UIManager.Instance.HighlightInventory(activeTool);
+    }
+
+    public void OnInventory2(InputAction.CallbackContext context)
+    {
+        activeTool = 2;
+        UIManager.Instance.HighlightInventory(activeTool);
+    }
+
+    public void OnInventory3(InputAction.CallbackContext context)
+    {
+        activeTool = 3;
+        UIManager.Instance.HighlightInventory(activeTool);
+    }
+
     private void Awake()
     {
         FlagSystem.OnFlagNotified += OnSpotlightSwitchedOn;
@@ -73,6 +100,8 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         scaledPlayerSpeed = playerSpeed/100;
         scaledGravityForce = gravityForce / 1000;
+
+        UIManager.Instance.HighlightInventory(activeTool);
     }
 
     void FixedUpdate() {
@@ -91,8 +120,6 @@ public class PlayerController : MonoBehaviour
             cam_local_pos.y = baseHeadHeight + headBobAmplitude * Mathf.Sin(headBobFrequency * Time.unscaledTime); 
         }
         cam.localPosition = cam_local_pos;
-
-
     }
 
     private void OnSpotlightSwitchedOn(object sender, FlagArgs flagArgs)
