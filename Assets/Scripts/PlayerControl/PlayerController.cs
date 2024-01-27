@@ -33,9 +33,11 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 localVelocity;
     private float gravity;
+    private float scaledPlayerSpeed;
+    private float scaledGravityForce;
 
     public void OnMove(InputAction.CallbackContext context) {
-        localVelocity = context.ReadValue<Vector2>() * playerSpeed;
+        localVelocity = context.ReadValue<Vector2>() * scaledPlayerSpeed;
     }
 
     public void OnLook(InputAction.CallbackContext context) {
@@ -50,10 +52,12 @@ public class PlayerController : MonoBehaviour
 
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
+        scaledPlayerSpeed = playerSpeed / 100;
+        scaledGravityForce = gravityForce / 1000;
     }
 
     void FixedUpdate() {
-        gravity = controller.isGrounded ? 0 : gravity - gravityForce * Time.smoothDeltaTime;
+        gravity = controller.isGrounded ? 0 : gravity - scaledGravityForce;
         controller.Move((transform.right * localVelocity.x) + 
                 (transform.forward * localVelocity.y) + 
                 (transform.up * gravity));
@@ -61,7 +65,6 @@ public class PlayerController : MonoBehaviour
 
     void Update() {
         // Applying the relative velocity
-
         // Head bobbing
         var cam_local_pos = cam.localPosition;
         if (localVelocity != Vector2.zero || Mathf.Abs(cam_local_pos.y - baseHeadHeight) > 0.01 ) {
