@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public enum PuzzleFlag {
+   SWITCH,
    UNTIE,
    SANDBAG,
    KEY
