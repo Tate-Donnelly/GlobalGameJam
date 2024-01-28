@@ -1,0 +1,25 @@
+﻿title: Dicky_Joke05_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: No, no. Of course not, of course not.
+
+Dicky: So either we have some real dumb climbers coming into town, or…
+
+<<PlayEffect Dicky_Obj Sway>>
+
+Dicky: Something else is going on, you know what I’m saying?
+
+<<PlayEffect Dicky_Obj Still>>
+
+Dicky: So, y’all know the Scarpelli family right? I mean, we know they’re mobsters, but there’s never been a body buried tied to their name.
+
+Dicky: Let’s just say they’re really good at their jobs.
+
+<<Punchline Dicky>>
+Dicky: You ever think they just invite one of their hits on a hiking trip and let the mountain take care of business?
+
+<<ChangeSprite Dicky_Obj Idle>>
+===

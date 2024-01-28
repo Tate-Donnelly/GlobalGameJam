@@ -1,0 +1,14 @@
+﻿title: Dicky_Joke_Punchline02
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<PlayEffect Dicky_Obj Jump>>
+
+<<Punchline Dicky>>
+Dicky: WHOOSH! Like a pro axe thrower, that woman! Haha!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

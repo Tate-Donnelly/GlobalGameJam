@@ -1,0 +1,18 @@
+﻿title: Dicky_Joke06_Punchline03
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Really, there was no difference, let me tell you.
+
+Dicky: Every morning at exactly 5am I’d come in and have to work with this really big bulge of a man who smelled like onions.
+
+Dicky: And I got used to working with him, honestly.
+
+<<Punchline Dicky>>
+Dicky: He’d just point at something and mumble under his breath “hmrmn mhrnm mhrm,” and I’d go “Yup! Got it!” and just hand him whatever we was pointing at.
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

@@ -1,0 +1,17 @@
+﻿title: Dicky_Joke03_Punchline06
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
+
+Dicky: And, well, he never did that to me, or anyone really. 
+
+<<Punchline Dicky>>
+Dicky: But I just wanted to feel that moment where the nerd wins for once, you know what I mean? Haha!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

@@ -1,0 +1,24 @@
+﻿title: Dicky_Joke06_Punchline02
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Anyway, you don’t get a lot of good gigs as a comedian, right? And you need some ways to pay the bills.
+
+Dicky: Gotta get some odd jobs here and there while you work on getting the next show.
+
+Dicky: And you don’t know when that next show is! I mean, there’s no guarantee you can ever make it, right?
+
+<<ChangeSprite Dicky_Obj Mad>>
+Dicky: You just don’t know! Honestly, it’s really bad for your heart and your mind! Like you’re an unwanted rut!
+
+<<ChangeSprite Dicky_Obj Talk>>
+Dicky: Anyway, one of the jobs I had to take while waiting for the next call. It was one of those associate mechanic jobs at a car dealership.
+
+<<Punchline Dicky>>
+Dicky: Real boring stuff, let me tell you. I might as well been a kid again holding a flashlight for my father!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

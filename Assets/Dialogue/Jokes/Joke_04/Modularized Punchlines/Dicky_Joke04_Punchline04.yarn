@@ -1,0 +1,24 @@
+﻿title: Dicky_Joke04_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<PlayEffect Dicky_Obj Still>>
+
+Dicky: And you know what I see?
+
+Dicky: Rosie was pairing up my Lock n’ Load with Borbie!
+
+Dicky: I thought, “Alright, we’re just playing with dolls now,” and I had another G. I. Shmoe.
+
+Dicky: So, I took him and did my best G. I. Shmoe impression.
+
+<<PlayEffect Dicky_Obj Sway>>
+
+<<Punchline Dicky>>
+Dicky: “Hey, baby, mind if I join in?”
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

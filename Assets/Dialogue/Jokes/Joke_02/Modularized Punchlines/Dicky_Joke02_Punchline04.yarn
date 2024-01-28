@@ -1,0 +1,20 @@
+﻿title: Dicky_Joke02_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: For real though, for real. Listen to me. Listen to me.
+
+Dicky: Do you want to know what he was like? Let me tell you about the time he found my Precious, that bastard.
+
+Dicky: Don’t worry, you’ll get to know what my Precious was.
+
+Dicky: Anyway, one day I come home from a long day of elementary school.
+
+<<Punchline Dicky>>
+Dicky: You know, just one of those days you need an ice cold Capri-Sun and some cheese and crackers, right?
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

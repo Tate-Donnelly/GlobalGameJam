@@ -1,0 +1,35 @@
+﻿title: Dicky_Joke03_Punchline05
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: I mean, seriously, now, c’mon.
+
+Dicky: So I was always jealous of that Brad guy, could never see the appeal in someone like him.
+
+Dicky: He’s a good guy though, I admit, I admit. I just couldn’t stand him!
+
+Dicky: But I think he knew I didn’t like him, that damn prick.
+
+Dicky: I couldn’t have that though, cuz I knew he’d send one of the linemen to bully me or something.
+
+Dicky: So I had to send a message.
+
+Dicky: One day. I stayed late after school cuz I wanted to catch him after football practice.
+
+Dicky: I knew that he took an exceptionally long time in the locker room and was always the last one out, don’t ask me how I know or what he’s doing.
+
+Dicky: Anyway, I sneak in there when it’s time. And I do what I’ve always wanted to do to a guy like him.
+
+Dicky: You know, you see it a lot in crappy cartoons and movies about high school, but to the nerds like me.
+
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
+
+<<Punchline Dicky>>
+Dicky: I slam him into an open locker, close it on him, and just yell out “YEAH HOW DOES THAT FEEL?”
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===
