@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6283c4fbc696440ba2500bae70d47986, type: 3}
+  m_Name: Bad Laugh
+  m_EditorClassIdentifier: 
+  reactionDialogue:
+  - {fileID: 11400000, guid: da7e2f7c0247adf42be6ad1fe1f02049, type: 2}
