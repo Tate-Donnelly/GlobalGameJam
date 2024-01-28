@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: Audio Manager File
   m_EditorClassIdentifier: 
   tabPos: 0
-  audioMixer: []
+  audioMixer:
+  - {fileID: 0}
   soundPrefab: {fileID: 0}
-  isPopulated: 0
-  directory: []
-  library: []
+  isPopulated: 1
+  directory:
+  - Assets/Audio/Dialogue/Jokes
+  - Assets/Audio/Dialogue/Laugh
+  library:
+  - key: test_joke
+    value: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
+  - key: manual_laugh
+    value: {fileID: 8300000, guid: 26a6f69cc80e0d643af673b2437388fb, type: 3}
