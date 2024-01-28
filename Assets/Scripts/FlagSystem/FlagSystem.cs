@@ -8,7 +8,8 @@ public enum PuzzleFlag {
    SWITCH,
    UNTIE,
    SANDBAG,
-   KEY
+   KEY,
+   DEATH
 };
 
 public class FlagArgs : EventArgs {

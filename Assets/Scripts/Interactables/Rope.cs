@@ -6,6 +6,9 @@ public class Rope : MonoBehaviour, IInteractable
 {
     public void InteractAction(ToolType type)
     {
+        if (!FlagSystem.FlagsNotified.Contains(PuzzleFlag.SWITCH)) {
+            FlagSystem.NotifyFlag(PuzzleFlag.DEATH);
+        }
         if (type != ToolType.KNIFE) return;
         FlagSystem.NotifyFlag(PuzzleFlag.SANDBAG);
     }

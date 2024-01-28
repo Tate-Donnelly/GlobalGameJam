@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private Transform cam;
     [SerializeField]
     private Transform flashlight;
+    [SerializeField]
+    private Transform dickyTransform;
 
     private Vector2 localVelocity;
     private float gravity;
@@ -56,11 +58,19 @@ public class PlayerController : MonoBehaviour
     [Header("Interactables Detection")]
     private GameObject lastDetected;
 
+    [Header("EXPOSED FOR DEBUG")]
+    [SerializeField]
+    private bool dead = false;
+
+    [SerializeField]
+
     public void OnMove(InputAction.CallbackContext context) {
+        if (dead) return;
         localVelocity = context.ReadValue<Vector2>() * scaledPlayerSpeed;
     }
 
     public void OnLook(InputAction.CallbackContext context) {
+        if (dead) return;
         var delta = context.ReadValue<Vector2>();
         transform.rotation = Quaternion.Euler(transform.eulerAngles + (Vector3.up * delta.x * sensitivity));
     
@@ -74,12 +84,14 @@ public class PlayerController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
+        if (dead) return;
         if(context.performed)
             inventory[activeTool].InteractAction(inventory[activeTool].type);
     }
 
     public void OnPickup(InputAction.CallbackContext context)
     {
+        if (dead) return;
         if (!context.performed)
             return;
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 20);
@@ -97,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnInventory0(InputAction.CallbackContext context)
     {
+        if (dead) return;
         if (!context.performed)
             return;
         activeTool = 0;
@@ -105,6 +118,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnInventory1(InputAction.CallbackContext context)
     {
+        if (dead) return;
         if (!context.performed)
             return;
         if (!hasKnife)
@@ -117,6 +131,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnInventory2(InputAction.CallbackContext context)
     {
+        if (dead) return;
         if (!context.performed)
             return;
         if (!hasFlashlight)
@@ -129,6 +144,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnInventory3(InputAction.CallbackContext context)
     {
+        if (dead) return;
         if (!context.performed)
             return;
         if (!hasKey)
@@ -144,7 +160,14 @@ public class PlayerController : MonoBehaviour
     {
         FlagSystem.OnFlagNotified += OnSpotlightSwitchedOn;
         FlagSystem.OnFlagNotified += OnUntieHands;
+        FlagSystem.OnFlagNotified += OnPlayerDied;
         QualitySettings.vSyncCount = 1;
+    }
+
+    private void OnDestroy() {
+        FlagSystem.OnFlagNotified -= OnSpotlightSwitchedOn;
+        FlagSystem.OnFlagNotified -= OnUntieHands;
+        FlagSystem.OnFlagNotified -= OnPlayerDied;
     }
 
     void Start() {
@@ -157,6 +180,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate() {
+        if (dead) return;
         gravity = controller.isGrounded ? 0 : gravity - scaledGravityForce;
 
         controller.Move((transform.right * localVelocity.x) +
@@ -165,6 +189,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
+        DisplayInteractable();
+        if (dead) return;
         // Applying the relative velocity
         // Head bobbing
         var cam_local_pos = cam.localPosition;
@@ -174,7 +200,6 @@ public class PlayerController : MonoBehaviour
         cam.localPosition = cam_local_pos;
 
         // Ray trace for interactables
-        DisplayInteractable();
     }
 
     private void OnSpotlightSwitchedOn(object sender, FlagArgs flagArgs)
@@ -186,6 +211,22 @@ public class PlayerController : MonoBehaviour
     {
         if (flagArgs.flag != PuzzleFlag.UNTIE) return;
         scaledPlayerSpeed = playerSpeed / 100;
+    }
+
+    private void OnPlayerDied(object sender, FlagArgs flagArgs) {
+        if (flagArgs.flag != PuzzleFlag.DEATH) return;
+        dead = true;
+        StartCoroutine(PlayerDiedCoroutine());
+    }
+
+    private IEnumerator PlayerDiedCoroutine() {
+        Debug.Log("Coroutine Started");
+        Vector3 target = Vector3.Normalize(dickyTransform.position - cam.position);
+        while (cam.forward != target) {
+            Vector3 interpolatedRotation = Vector3.Lerp(cam.forward, target, 0.05f);
+            cam.forward = interpolatedRotation; 
+            yield return null; 
+        }
     }
 
     public void EnableFlashlight()
