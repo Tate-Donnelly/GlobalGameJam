@@ -6,6 +6,7 @@ tags:
 
 Dicky: C’mon now, have some faith! Haha!
 
+<<PlayEffect Dicky_Obj Sway>>
 <<Punchline Dicky>>
 Dicky: It was cuz every time you walk down that street, you only saw the buttcracks of hobos!
 

@@ -10,6 +10,7 @@ Dicky: Crack Street!
 
 Dicky: Take a guess at why the city decided to name a street Crack Street.
 
+<<PlayEffect Dicky_Obj Sway>>
 <<Punchline Dicky>>
 Dicky: No, no, get your head out of the gutter. Not that!
 

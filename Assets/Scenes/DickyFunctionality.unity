@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10490,6 +10490,14 @@ PrefabInstance:
       propertyPath: onLaughedOutsidePunchline.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1687355063}
+    - target: {fileID: 6788258444023213857, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58aa8b1c63a25834f90b5a24af9e6ef8, type: 3}
+    - target: {fileID: 6788258444023213857, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7780946087657316706, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: m_Name
       value: Dicky

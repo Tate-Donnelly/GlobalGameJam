@@ -661,6 +661,14 @@ PrefabInstance:
       propertyPath: lockX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7692606442953405210, guid: 49fa24d5cfa1e124c81a68fee5277d62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58aa8b1c63a25834f90b5a24af9e6ef8, type: 3}
+    - target: {fileID: 7692606442953405210, guid: 49fa24d5cfa1e124c81a68fee5277d62, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
