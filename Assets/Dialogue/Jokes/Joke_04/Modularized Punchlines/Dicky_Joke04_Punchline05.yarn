@@ -1,0 +1,15 @@
+﻿title: Dicky_Joke04_Punchline05
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<PlayEffect Dicky_Obj Sway>>
+<<Punchline Dicky>>
+Dicky: “If you’re Loading up with him, let me Lock myself with you, huh?”
+
+<<PlayEffect Dicky_Obj Still>>
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

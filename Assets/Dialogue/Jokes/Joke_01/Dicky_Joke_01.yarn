@@ -1,0 +1,57 @@
+﻿title: Dicky_Joke_01
+//one joke in Dicky’s full routine, each joke is modularized into an individual node
+//possible punchlines are bolded and in red
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+Dicky: Alright, alright.
+
+Dicky: So I was walking down Lewis Street, right?
+
+Dicky: And you know how Lewis Street is, it’s a wild show of hobos and rats, right?
+
+<<ChangeSprite Dicky_Obj Mad>>
+Dicky: It actually is a disgrace to the city, no joke.
+
+<<PlayEffect Dicky_Obj Jump>>
+Dicky: Honestly, someone should just go down there and SWOOSH!
+
+
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
+<<Punchline Dicky>>
+Dicky: Just clean the streets, you know what I’m saying? Haha!
+
+Dicky: Anyway, do you know what Lewis Street was called before it was called Lewis Street?
+
+Dicky: Crack Street!
+
+Dicky: Take a guess at why the city decided to name a street Crack Street.
+
+<<Punchline Dicky>>
+Dicky: No, no, get your head out of the gutter. Not that!
+
+Dicky: C’mon now, have some faith! Haha!
+
+<<Punchline Dicky>>
+Dicky: It was cuz every time you walk down that street, you only saw the buttcracks of hobos!
+
+Dicky: Honestly, honestly, it’s clear that the street was always a problem right?
+
+Dicky: It’s honestly a shame they put the best spaghetti place in the city on Crack Street.
+
+Dicky: You ever been there? It’s a place called Slice n’ Dice.
+
+Dicky: It’s an odd name, I admit, I admit.
+
+Dicky: But honest to God. I’ve never seen a meat delivery truck go to that pizza place.
+
+<<Punchline Dicky>>
+Dicky: I guess we know where Slice n’ Dice is collecting their meatballs, huh? Haha!
+
+<<Punchline Dicky>>
+Dicky: Looks like someone got to cleaning the streets, huh? Haha!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

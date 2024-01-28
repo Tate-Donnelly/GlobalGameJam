@@ -1,0 +1,22 @@
+﻿title: Dicky_Joke01_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Honestly, honestly, it’s clear that the street was always a problem right?
+
+Dicky: It’s honestly a shame they put the best spaghetti place in the city on Crack Street.
+
+Dicky: You ever been there? It’s a place called Slice n’ Dice.
+
+Dicky: It’s an odd name, I admit, I admit.
+
+Dicky: But honest to God. I’ve never seen a meat delivery truck go to that pizza place.
+
+<<Punchline Dicky>>
+Dicky: I guess we know where Slice n’ Dice is collecting their meatballs, huh? Haha!
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+===

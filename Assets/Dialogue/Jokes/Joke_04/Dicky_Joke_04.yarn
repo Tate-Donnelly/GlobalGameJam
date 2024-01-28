@@ -1,0 +1,85 @@
+﻿title: Dicky_Joke_04
+//one joke in Dicky’s full routine, each joke is modularized into an individual node
+//possible punchlines are bolded and in red
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Hey, hey, hey. Listen to this.
+
+Dicky: My mother, right? She was just like my father, just didn’t get me or try to understand me.
+
+Dicky: Whatever I liked at like age five or six, she just kept thinking I would like for the rest of my time in that house.
+
+Dicky: It didn’t matter what I kept saying to her! I had to still be a fan of G.I. Shmoe at age seventeen, right?
+
+<<PlayEffect Dicky_Obj Sway>>
+Dicky: I mean, if I said otherwise under my breath, she’d just turn around and WHOOSH!
+
+<<PlayEffect Dicky_Obj Jump>>
+
+<<Punchline Dicky>>
+Dicky: Throw a sandal right at my face!
+
+<<PlayEffect Dicky_Obj Jump>>
+
+<<Punchline Dicky>>
+Dicky: WHOOSH! Like a pro axe thrower, that woman! Haha!
+
+<<PlayEffect Dicky_Obj Still>>
+
+Dicky: Alright, alright. But my mother was getting me G. I. Shmoes every Christmas, right?
+
+Dicky: So I had a whole bunch of ‘em! Couldn’t even keep track of them!
+
+Dicky: But there was one that I was particularly fond of. My favorite one.
+
+Dicky: It was Lock n’ Load. Coolest G. I. Shmoe out there, anyone else had one of him?
+
+Dicky: Yeah, but my mother, she’d always bring some of her friends and their kids over, right?
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: Those pricks, they never even bothered with me, they went straight for my G. I. Shmoe collection!
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Anyway, for that reason, one here and there would always go missing. But I didn’t bother cuz they weren’t Lock n’ Load.
+
+Dicky: Then, one day, this kid Rosie comes over.
+
+Dicky: She steps out of my room to go to my sister’s room, and I notice Lock n’ Load was gone.
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: How dare she!
+
+<<PlayEffect Dicky_Obj Jump>>
+
+<<Punchline Dicky>>
+Dicky: So I didn’t even bother with courtesy, i just BAM! Welcomed myself right in that room!
+
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
+
+Dicky: And you know what I see?
+
+Dicky: Rosie was pairing up my Lock n’ Load with Borbie!
+
+Dicky: I thought, “Alright, we’re just playing with dolls now,” and I had another G. I. Shmoe.
+
+Dicky: So, I took him and did my best G. I. Shmoe impression.
+
+<<PlayEffect Dicky_Obj Sway>>
+
+<<Punchline Dicky>>
+Dicky: “Hey, baby, mind if I join in?”
+
+<<Punchline Dicky>>
+Dicky: “If you’re Loading up with him, let me Lock myself with you, huh?”
+
+<<PlayEffect Dicky_Obj Still>>
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

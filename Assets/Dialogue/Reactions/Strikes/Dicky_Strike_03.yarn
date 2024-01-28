@@ -1,0 +1,11 @@
+﻿title: Dicky_Strike_03
+//Trigger: player doesn’t laugh at right time for the third, and final, time
+//each strike is modularized into an individual node
+---
+
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect JumpRepeat>>
+
+Dicky: You’re all the same! All the same! You’re fucking done! Done! AGH!
+
+===

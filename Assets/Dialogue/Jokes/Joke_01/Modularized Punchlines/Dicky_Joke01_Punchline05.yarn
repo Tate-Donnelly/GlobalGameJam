@@ -1,0 +1,11 @@
+﻿title: Dicky_Joke01_Punchline05
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: Looks like someone got to cleaning the streets, huh? Haha!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

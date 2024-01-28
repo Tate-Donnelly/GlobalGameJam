@@ -1,0 +1,31 @@
+﻿title: Dicky_Joke08_Punchline03
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Anyway, yeah, it was a real nice place, but my sister told me she was gonna make a “special request to the chef” cuz it was our first time together in so long.
+
+Dicky: So we sit down, and the steaks come out, and they look gorgeous. And I mean gorgeous!
+
+Dicky: I cut mine open, perfect medium rare, this was about to be the best dinner I’ve had in years.
+
+Dicky: So I take a bite. And I thought. “Hm. This tastes kinda funny.”
+
+Dicky: And I take another bite. And I thought again, “Hm. This tastes kinda funny.”
+
+Dicky: So I tell my sister, hey, my steak tastes kinda funny.
+
+Dicky: And she says, “Yeah, I had a funny guy handle the steak for my funny guy!”
+
+Dicky: And she goes on to explain the whole process she did for my steak, while I’m eating this thing up.
+
+<<PlayEffect Dicky_Obj Jump>>
+<<Punchline Dicky>>
+Dicky: And then I realize–the funny guy put funny stuff in my funny steak!
+
+<<PlayEffect Dicky_Obj Still>>
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

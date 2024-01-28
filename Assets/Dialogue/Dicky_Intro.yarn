@@ -1,0 +1,31 @@
+﻿title: Dicky_Intro
+//plays at beginning of game
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Well, well. Look who's coming to.
+
+Dicky: Glad you could join us.
+
+Dicky: Unlucky for you, you are the front row special guest to tonight’s comedy entertainment extravaganza! Welcome to the night of your life!
+
+Dicky: Of course, performed by yours truly. Hehe.
+
+Dicky: This show and your involuntary participation is very simple.
+
+Dicky: I will perform my routine, and whenever we tell you to laugh–
+
+<<ChangeSprite Dicky_Obj Mad>>
+Dicky: Laugh! Laugh like you mean it!
+
+Dicky: And no funny business either! I’ll know.
+
+<<ChangeSprite Dicky_Obj Talk>>
+Dicky: Try anything or mess up your cue, and you know exactly what’s coming, buddy.
+
+Dicky: So. Shall we get on with the show?
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

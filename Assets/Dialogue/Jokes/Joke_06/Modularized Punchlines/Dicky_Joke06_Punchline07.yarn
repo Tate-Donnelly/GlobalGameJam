@@ -1,0 +1,12 @@
+﻿title: Dicky_Joke06_Punchline07
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: Like how do you mess up that bad? Right, right?
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

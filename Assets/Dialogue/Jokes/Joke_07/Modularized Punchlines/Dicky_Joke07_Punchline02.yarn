@@ -1,0 +1,20 @@
+﻿title: Dicky_Joke07_Punchline02
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: I mean, it was brutal! Brutal!
+
+Dicky: And let me tell you how I messed up so bad.
+
+Dicky: The day before, I saw that same teacher mingling a little too close with the married supervisor.
+
+Dicky: And even with my kid brain I knew exactly what was going on.
+
+<<Punchline Dicky>>
+Dicky: Then my little pee-wee brain thought, “Huh! I should tell a joke about that tomorrow!”
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

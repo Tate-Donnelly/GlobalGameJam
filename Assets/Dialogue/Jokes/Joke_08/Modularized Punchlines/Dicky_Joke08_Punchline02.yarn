@@ -1,0 +1,12 @@
+﻿title: Dicky_Joke08_Punchline02
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: Showing up in the same blazer with the hole in the armpits my grandfather had. Haha.
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

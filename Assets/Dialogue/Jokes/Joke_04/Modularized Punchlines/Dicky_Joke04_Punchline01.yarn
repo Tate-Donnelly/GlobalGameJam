@@ -1,0 +1,25 @@
+﻿title: Dicky_Joke04_Punchline01
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Hey, hey, hey. Listen to this.
+
+Dicky: My mother, right? She was just like my father, just didn’t get me or try to understand me.
+
+Dicky: Whatever I liked at like age five or six, she just kept thinking I would like for the rest of my time in that house.
+
+Dicky: It didn’t matter what I kept saying to her! I had to still be a fan of G.I. Shmoe at age seventeen, right?
+
+<<PlayEffect Dicky_Obj Sway>>
+Dicky: I mean, if I said otherwise under my breath, she’d just turn around and WHOOSH!
+
+<<PlayEffect Dicky_Obj Jump>>
+
+<<Punchline Dicky>>
+Dicky: Throw a sandal right at my face!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

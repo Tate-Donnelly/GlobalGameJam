@@ -1,0 +1,25 @@
+﻿title: Dicky_Joke06_Punchline05
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Then one day he called out sick, and I was paired up with someone who didn’t exactly abide by our nice pointy system.
+
+Dicky: He was a guy who never looked up, just said what he needed to be said, held his hand out, and expected the right thing to be there.
+
+Dicky: Wasn’t gonna work for me! I had no idea what I was doing!
+
+Dicky: So, first car comes in, and I just pray to God he doesn’t ask me for anything.
+
+Dicky: Of course, the time comes, he asks for something. And I hand him whatever sounded right.
+
+<<PlayEffect Dicky_Obj Jump>>
+<<Punchline Dicky>>
+Dicky: Next thing you know, YEEOOOWCH, the car radiator is on his foot.
+
+<<PlayEffect Dicky_Obj Still>>
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

@@ -1,0 +1,12 @@
+﻿title: Dicky_Joke03_Punchline02
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: And It’s not like I could relate to any of that, right? I mean, look at me, c’mon!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

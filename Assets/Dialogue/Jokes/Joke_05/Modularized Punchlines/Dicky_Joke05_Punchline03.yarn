@@ -1,0 +1,12 @@
+﻿title: Dicky_Joke05_Punchline03
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: Is there some sort of vengeful god holed up there going “Feed me, feed me”? Haha.
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

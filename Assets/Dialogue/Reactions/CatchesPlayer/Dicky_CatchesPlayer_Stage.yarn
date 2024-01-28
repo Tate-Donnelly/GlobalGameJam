@@ -1,0 +1,18 @@
+﻿title: Dicky_CatchesPlayer_Stage
+//Trigger: player gets too close to the stage and Dicky notices
+---
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: Woah there, back up, back up!
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: You got yourself untied, huh?
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: Unfortunately, that was the only chance you got, buddy! Wasted!
+
+===
+
