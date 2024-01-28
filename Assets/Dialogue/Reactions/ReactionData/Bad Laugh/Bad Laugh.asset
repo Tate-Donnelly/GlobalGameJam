@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Bad Laugh
   m_EditorClassIdentifier: 
   reactionDialogue:
+  - {fileID: 11400000, guid: ab1e40dd76d96184a896bb32606ddb7a, type: 2}
+  - {fileID: 11400000, guid: da07283e9f99736449a496fa5fa687a3, type: 2}
   - {fileID: 11400000, guid: da7e2f7c0247adf42be6ad1fe1f02049, type: 2}

@@ -33,6 +33,7 @@ public class DickyAnimationHandler : MonoBehaviour
     }
 
     //Using strings here for yarnspinner
+    [YarnCommand("ChangeSprite")]
     public void ChangeSprite(string spriteString)
     {
         switch(spriteString)
@@ -52,6 +53,7 @@ public class DickyAnimationHandler : MonoBehaviour
         }
     }
 
+    [YarnCommand("PlayEffect")]
     public void PlayEffect(string effectString)
     {
         switch (effectString)
@@ -77,6 +79,7 @@ public class DickyAnimationHandler : MonoBehaviour
         }
     }
 
+    [YarnCommand("PlayStatus")]
     public void PlayStatus(string statusString)
     {
         switch (statusString)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Dialogue;
 using UnityEngine;
+using Yarn;
 using Yarn.Unity;
 using Random=System.Random;
 
@@ -43,17 +44,18 @@ namespace Dicky
 
             _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
 
-            PlayRandomJoke();
+            //PlayRandomJoke();
+            _dialogueRunner.StartDialogue("Intro");
         }
 
         private void Update()
         {
             if(stopTellingJokes) return;
-            if (dialoguePauseTimer > 0)
-            {
-                dialoguePauseTimer -= Time.deltaTime;
-                if (dialoguePauseTimer <= 0) PlayRandomJoke();
-            }
+            //if (dialoguePauseTimer > 0)
+            //{
+            //    dialoguePauseTimer -= Time.deltaTime;
+            //    if (dialoguePauseTimer <= 0) PlayRandomJoke();
+            //}
         }
 
         #region Play Dialogue
@@ -62,6 +64,7 @@ namespace Dicky
         /// Set a random joke from _unusedJokes to _currentJokeData.
         /// If there are no unused jokes left, set the list to _usedJokes
         /// </summary>
+        [YarnCommand("PlayRandomJoke")]
         private void PlayRandomJoke()
         {
             Random rand = new Random();

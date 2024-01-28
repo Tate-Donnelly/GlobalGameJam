@@ -1,0 +1,62 @@
+﻿title: Dicky_Blinded
+tags:
+---
+Dicky: HEY! I can’t see a thing! Who messed with the lights?
+
+Dicky: Aw, fuck. You better still be there! I can hear you!
+===
+
+title: Dicky_Sandbagged
+tags:
+---
+<<ChangeSprite Dicky_Obj KnockedOut>>
+Dicky: Well, that’s not supposed to–
+===
+
+title: Dicky_CatchesPlayer_Stage
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+Dicky: Woah there, back up, back up!
+
+Dicky: You got yourself untied, huh?
+
+Dicky: Unfortunately, that was the only chance you got, buddy! Wasted!
+===
+
+title: Dicky_CatchesPlayer_Untying
+tags:
+---
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+Dicky: It’s no use trying to get out. I can see you squirming. 
+
+Dicky: You look so pathetic. 
+
+Dicky: That’s not even a strike, it’s just game over for you, buddy. Bye!
+===
+
+title: Dicky_CatchesPlayer_Door
+tags:
+---
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+Dicky: The door! I can hear you at the door!
+
+Dicky: Tough break, buddy, I got you now! Die!
+
+===
+
+title: Dicky_CatchesPlayer_Flashlight
+tags:
+---
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+Dicky: What is that? A flashlight?
+
+Dicky: I can see that, buddy! You have nowhere to run!
+
+Dicky: I’ll kill you where you stand! Perish!
+
+
+===

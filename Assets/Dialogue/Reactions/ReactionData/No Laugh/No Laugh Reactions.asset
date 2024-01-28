@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: No Laugh Reactions
   m_EditorClassIdentifier: 
   reactionDialogue:
+  - {fileID: 11400000, guid: 6f4fb0d296ea5104fa922217930e7f39, type: 2}
+  - {fileID: 11400000, guid: c0eaedeb83cc99f4bb8bddf2c284f71b, type: 2}
   - {fileID: 11400000, guid: a7d81bbbbacced94e82435034f60518d, type: 2}
