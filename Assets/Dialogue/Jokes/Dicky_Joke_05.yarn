@@ -1,0 +1,77 @@
+﻿title: Dicky_Joke_05
+//one joke in Dicky’s full routine, each joke is modularized into an individual node
+//possible punchlines are bolded and in red
+---
+
+<<ChangeSprite Talk>>
+
+Dicky: Okay, okay.
+
+Dicky: So. Mountains. We actually have a couple just beyond the city.
+
+Dicky: They’re cool, right? They’re cool. People like to take in a nice view of them, maybe take a pic or two, spend a whole day hiking up one.
+
+<<PlayEffect Sway>>
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: But, really, what is UP with them? Eh?
+
+<<CueLaugh false>>
+
+<<PlayEffect Still>>
+
+Dicky: I mean really, really. Think about it. We have one of the most dangerous mountains in the country to summit right outside our city.
+
+Dicky: If you actually pay attention to the headlines, I swear you’ll see at least one reported climber death per year.
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: What, does the mountain need an annual sacrifice or something so it doesn’t avalanche into the city? Haha.
+
+<<Punchline Dicky>>
+Dicky: Is there some sort of vengeful god holed up there going “Feed me, feed me”? Haha.
+
+<<CueLaugh false>>
+
+Dicky: No, no. Of course not, of course not.
+
+Dicky: So either we have some real dumb climbers coming into town, or…
+
+<<PlayEffect Sway>>
+
+Dicky: Something else is going on, you know what I’m saying?
+
+<<PlayEffect Still>>
+
+Dicky: So, y’all know the Scarpelli family right? I mean, we know they’re mobsters, but there’s never been a body buried tied to their name.
+
+Dicky: Let’s just say they’re really good at their jobs.
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: You ever think they just invite one of their hits on a hiking trip and let the mountain take care of business?
+
+<<Punchline Dicky>>
+Dicky: Obviously the Scarpellis aren’t guilty of anything, it was just a climbing accident! Eh?
+
+<<CueLaugh false>>
+
+Dicky: That’s why they can’t get caught for anything! They’re not getting their hands dirty!
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: At this point, the mountain is probably a made man!
+
+<<PlayEffect Sway>>
+<<Punchline Dicky>>
+Dicky: Maybe I should start going up to the mountain for one of my night jobs, huh? Haha.
+
+<<CueLaugh false>>
+
+<<PlayEffect Still>>
+
+<<ChangeSprite Idle>>
+
+===
+
