@@ -30,6 +30,13 @@ public class FlagSystem : MonoBehaviour
     public FlagUnityEvent OnFlagNotifiedUnityEvent;
 
     private HashSet<PuzzleFlag> flagsNotified;
+    public static HashSet<PuzzleFlag> FlagsNotified
+    {
+        get
+        {
+            return instance.flagsNotified;
+        }
+    }
 
     public static void NotifyFlag(PuzzleFlag flag) {
         instance.notifyFlag(flag);
