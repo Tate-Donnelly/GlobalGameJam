@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
+  m_Script: {fileID: 0}
   m_Name: TestJoke 2
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::JokeSO
   yarnNodeName: TEST2
   dialogueDuration: 15
   dialogueClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}

@@ -10471,6 +10471,22 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: _unusedJokes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: _unusedJokes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b679692def29dcb4e8b7fecd52fa0bd6, type: 2}
+    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: _unusedJokes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 23e01e924de19e142963ffe9a1788cd7, type: 2}
+    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: _unusedJokes.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b7bf9f35781d5640a245ed8beb45b15, type: 2}
+    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _reactionsToPlayer._serializedList.Array.size
       value: 3
       objectReference: {fileID: 0}
