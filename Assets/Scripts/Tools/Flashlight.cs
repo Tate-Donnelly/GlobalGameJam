@@ -15,8 +15,8 @@ public class Flashlight : Tool
     public override void InteractAction(ToolType type)
     {
         if (type != ToolType.FLASHLIGHT) return;
-        this.gameObject.SetActive(!flashlightOn);
         flashlightOn = !flashlightOn;
         flashlightSFX.Play();
+        this.gameObject.SetActive(flashlightOn);
     }
 }

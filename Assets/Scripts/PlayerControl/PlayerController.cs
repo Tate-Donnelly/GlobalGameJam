@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         ["flashlight"] = 2,
         ["key"] = 3
     };
+    [SerializeField] AudioSource pickupSFX;
 
     [Header("Interactables Detection")]
     private GameObject lastDetected;
@@ -101,6 +102,7 @@ public class PlayerController : MonoBehaviour
             if (hitData.collider.tag == "Pickup")
             {
                 hitData.collider.GetComponent<IPickupable>().Pickup();
+                pickupSFX.Play();
                 UIManager.Instance.UpdateSlots(hitData.collider.GetComponent<IPickupable>().GetName(), dictionaryTools[hitData.collider.GetComponent<IPickupable>().GetName()]);
                 activeTool = dictionaryTools[hitData.collider.GetComponent<IPickupable>().GetName()];
             }
@@ -211,6 +213,7 @@ public class PlayerController : MonoBehaviour
     {
         if (flagArgs.flag != PuzzleFlag.UNTIE) return;
         scaledPlayerSpeed = playerSpeed / 100;
+
     }
 
     private void OnPlayerDied(object sender, FlagArgs flagArgs) {

@@ -18,6 +18,7 @@ public class Key : Tool
             if (hitData.collider.tag == "Interactable" && hitData.collider.gameObject.name == "Exit")
             {
                 hitData.collider.GetComponent<IInteractable>().InteractAction(this.type);
+
             }
         }
     }
