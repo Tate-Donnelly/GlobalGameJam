@@ -27,15 +27,19 @@ public class LaughDetection : MonoBehaviour
     private StreamingAssetsLanguageModelProvider languageModelProvider;
 
     [Header("Callbacks")]
+    [SerializeField] public UnityEvent onSpeakingDetected;
+    [SerializeField] public UnityEvent onResponseNotLaugh;
+    [SerializeField] public UnityEvent onResponseSaved;
     [SerializeField] public UnityEvent onLaughedDuringPunchline;
     [SerializeField] public UnityEvent onLaughedOutsidePunchline;
 
     //Joke Stuff
     [Header("Joke Stuff")]
+    [SerializeField] private float responseTimeMax = 1;
     [SerializeField] private List<string> possibleLaughs;
     private JokeSO currentJoke;
-    private bool speechRunning;
-    private float responseDelayBuffer = 0;
+    private bool responseRunning;
+    private float responseTimer;
     public DateTime laughed;
     public bool hasLaughed;
 
@@ -57,23 +61,18 @@ public class LaughDetection : MonoBehaviour
 
         // Set default language.
         languageModelProvider.language = SystemLanguage.English;
-        UpdateStatus("");
         InitializeActivityDetector();
 
         // Bind recognizer to event handlers.
         recognizer.Started.AddListener(() =>
         {
             _recognizedText.Clear();
-            UpdateStatus("");
         });
 
         recognizer.Finished.AddListener(() => Debug.Log("Finished"));
 
         recognizer.PartialResultReady.AddListener(OnPartialResult);
         recognizer.ResultReady.AddListener(OnResult);
-
-        recognizer.InitializationFailed.AddListener(OnError);
-        recognizer.RuntimeFailed.AddListener(OnError);
     }
 
     private void Update()
@@ -81,6 +80,16 @@ public class LaughDetection : MonoBehaviour
         if(punchlineTimer > 0)
         {
             punchlineTimer -= Time.deltaTime;
+        }
+
+        if(responseRunning)
+        {
+            responseTimer += Time.deltaTime;
+            if(responseTimer >= responseTimeMax)
+            {
+                //Stop recording speech and analyze
+                SaveCurrentResponse();
+            }
         }
     }
     
@@ -101,26 +110,30 @@ public class LaughDetection : MonoBehaviour
     {
         activityDetector.TimeoutMs = 0;
         activityDetector.Spoke.AddListener(() => {
-            if(!speechRunning)
+            if(!responseRunning)
             {
-                speechRunning = true;
+                responseRunning = true;
                 currentResponse = new CapturedPlayerResponse(DateTime.Now);
+                onSpeakingDetected.Invoke();
+                //Reset response time
+                responseTimer = 0;
             }
         });
-        activityDetector.Silenced.AddListener(() => {
-            if (speechRunning)
-            {
-                if (currentResponse != null)
-                {
-                    currentResponse.endTime = DateTime.Now;
-                    currentResponse.responseText = _recognizedText.CurrentText;
-                    capturedResponses.Add(currentResponse);
-                    CheckIfLaugh(currentResponse);
-                }
-                _recognizedText.Clear();
-                speechRunning = false;
-            }
-        });
+        //activityDetector.Silenced.AddListener(() => {
+        //    if (speechRunning)
+        //    {
+        //        if (currentResponse != null)
+        //        {
+        //            currentResponse.endTime = DateTime.Now;
+        //            currentResponse.responseText = _recognizedText.CurrentText;
+        //            Debug.Log("Saved Response As: " + currentResponse.responseText);
+        //            capturedResponses.Add(currentResponse);
+        //            CheckIfLaugh(currentResponse);
+        //        }
+        //        _recognizedText.Clear();
+        //        speechRunning = false;
+        //    }
+        //});
         activityDetector.StartProcessing();
     }
 
@@ -136,7 +149,7 @@ public class LaughDetection : MonoBehaviour
                 return;
             }
         }
-        onLaughedOutsidePunchline?.Invoke();
+        onResponseNotLaugh.Invoke();
     }
 
     public void ManualLaugh()
@@ -163,26 +176,33 @@ public class LaughDetection : MonoBehaviour
         }
     }
 
-    private void UpdateStatus(string text)
-    {
-        //status.text = text;
-    }
-
     private void OnPartialResult(PartialResult partial)
     {
         _recognizedText.Append(partial);
-        UpdateStatus(_recognizedText.CurrentText);
     }
 
     private void OnResult(Result result)
     {
         _recognizedText.Append(result);
-        UpdateStatus(_recognizedText.CurrentText);
+        SaveCurrentResponse();
     }
 
-    private void OnError(SpeechProcessorException exception)
+    private void SaveCurrentResponse()
     {
-        UpdateStatus($"<color=red>{exception.Message}</color>");
+        if (currentResponse != null)
+        {
+            currentResponse.endTime = DateTime.Now;
+            currentResponse.responseText = _recognizedText.CurrentText;
+            Debug.Log("Saved Response As: " + currentResponse.responseText);
+            capturedResponses.Add(currentResponse);
+            CheckIfLaugh(currentResponse);
+            onResponseSaved?.Invoke();
+            currentResponse = null;
+        }
+        _recognizedText.Clear();
+        responseRunning = false;
+        //Reset response time
+        responseTimer = 0;
     }
 
     /// <summary>
