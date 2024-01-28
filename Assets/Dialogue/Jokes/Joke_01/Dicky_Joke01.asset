@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnNodeName: Dicky_Joke01_Punchline04
   dialogueDuration: 10
-  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  dialogueClip: {fileID: 0}
   punchlineBufferTime: 3
 --- !u!114 &-1372665186156118892
 MonoBehaviour:
@@ -30,7 +30,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnNodeName: Dicky_Joke01_Punchline05
   dialogueDuration: 10
-  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  dialogueClip: {fileID: 0}
   punchlineBufferTime: 3
 --- !u!114 &11400000
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnNodeName: Dicky_Joke01_Punchline01
   dialogueDuration: 10
-  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  dialogueClip: {fileID: 0}
   punchlineBufferTime: 3
 --- !u!114 &7483177180521934135
 MonoBehaviour:
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnNodeName: Dicky_Joke01_Punchline03
   dialogueDuration: 10
-  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  dialogueClip: {fileID: 0}
   punchlineBufferTime: 3
 --- !u!114 &7781229435700361652
 MonoBehaviour:
@@ -97,5 +97,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnNodeName: Dicky_Joke01_Punchline02
   dialogueDuration: 10
-  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  dialogueClip: {fileID: 0}
   punchlineBufferTime: 3
