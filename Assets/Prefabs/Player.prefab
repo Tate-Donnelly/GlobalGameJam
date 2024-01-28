@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5561083590199137269}
   - component: {fileID: 6194867034839822391}
   - component: {fileID: 4330566080127773518}
-  - component: {fileID: 7758725190709918791}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -93,19 +92,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7012647886375840285}
   m_Enabled: 1
---- !u!114 &7758725190709918791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7012647886375840285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38db15f6264c1364aa8d832bafa44915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 759c05e0d18bdcc44928a1cb36026c39, type: 2}
 --- !u!1 &8958000319674775305
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,8 +278,24 @@ MonoBehaviour:
     m_ActionName: gameplay/interact[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 98e22c33-df25-47ac-8d3d-b9ff058d9bca
-    m_ActionName: gameplay/manuallaugh[/Keyboard/space]
+    m_ActionId: dea1e6f4-f626-4a45-ba86-1c0c68af7248
+    m_ActionName: gameplay/inventory1[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 89ecb112-7b11-43bf-b436-0d460ef38b41
+    m_ActionName: gameplay/inventory2[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 63a0fe44-5280-49dd-9bd2-6c9bf47bc436
+    m_ActionName: gameplay/inventory3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 38eb6367-56d0-4fab-9a08-453b49231a0f
+    m_ActionName: gameplay/inventory3[/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87ea464a-cb14-488f-9555-b54d7ee19a18
+    m_ActionName: gameplay/pickup[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: gameplay
