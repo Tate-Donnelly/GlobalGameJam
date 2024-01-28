@@ -17,6 +17,10 @@ public class HandsTiedPuzzle : MonoBehaviour, IInteractable
         if(health < 0)
         {
             source.PlayOneShot(source.clip);
+            if (!FlagSystem.FlagsNotified.Contains(PuzzleFlag.SWITCH)) {
+                FlagSystem.KillPlayer(PuzzleFlag.UNTIE);
+                return;
+            }
             FlagSystem.NotifyFlag(PuzzleFlag.UNTIE);
             rend.enabled = false;
             StartCoroutine(DisableHands());
@@ -32,7 +36,7 @@ public class HandsTiedPuzzle : MonoBehaviour, IInteractable
     }
     IEnumerator DisableHands()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.7f);
         this.gameObject.SetActive(false);
     }
 }
