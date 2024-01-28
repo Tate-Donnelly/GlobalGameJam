@@ -5,6 +5,7 @@ using UnityEngine;
 public class Flashlight : Tool
 {
     private bool flashlightOn = false;
+    [SerializeField] AudioSource flashlightSFX;
 
     private void Start()
     {
@@ -16,5 +17,6 @@ public class Flashlight : Tool
         if (type != ToolType.FLASHLIGHT) return;
         this.gameObject.SetActive(!flashlightOn);
         flashlightOn = !flashlightOn;
+        flashlightSFX.Play();
     }
 }
