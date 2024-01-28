@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorPuzzle : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DoorPuzzle : MonoBehaviour
         
         Debug.Log("Game End");
         source.Play();
+        StartCoroutine(LoadMenu());
     }
 
     private void Awake()
@@ -22,5 +24,11 @@ public class DoorPuzzle : MonoBehaviour
     private void OnDestroy()
     {
         FlagSystem.OnFlagNotified -= OnDoorUnlocked;
+    }
+
+    IEnumerator LoadMenu()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(0);
     }
 }

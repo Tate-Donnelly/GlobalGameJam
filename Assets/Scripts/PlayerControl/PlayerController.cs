@@ -171,6 +171,7 @@ public class PlayerController : MonoBehaviour
         FlagSystem.OnFlagNotified -= OnSpotlightSwitchedOn;
         FlagSystem.OnFlagNotified -= OnUntieHands;
         FlagSystem.OnFlagNotified -= OnPlayerDied;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void Start() {
