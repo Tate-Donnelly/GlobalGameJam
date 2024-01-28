@@ -10,6 +10,7 @@ public class FlagTest : MonoBehaviour
 
     public void FlagNotified(FlagArgs e) {
         gameObject.SetActive(true);
+        Debug.Log(FlagSystem.FlagsNotified.Contains(PuzzleFlag.SWITCH));
     }
 
     // Start is called before the first frame update
