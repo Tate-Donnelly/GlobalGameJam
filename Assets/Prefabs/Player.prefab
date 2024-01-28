@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 7564429107031545497}
   - component: {fileID: 8084309005357315216}
   - component: {fileID: 4378033873128047550}
-  - component: {fileID: -4855827606531611101}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -289,6 +288,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 63a0fe44-5280-49dd-9bd2-6c9bf47bc436
     m_ActionName: gameplay/inventory3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 38eb6367-56d0-4fab-9a08-453b49231a0f
+    m_ActionName: gameplay/inventory3[/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87ea464a-cb14-488f-9555-b54d7ee19a18
+    m_ActionName: gameplay/pickup[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: gameplay
@@ -340,15 +347,3 @@ MonoBehaviour:
   gravityForce: 10
   controller: {fileID: 8084309005357315216}
   cam: {fileID: 5561083590199137269}
---- !u!114 &-4855827606531611101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8958000319674775305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1a28bfcdf57b9d4ba3ebb66e38b9489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Flashlight : Tool
 {
-    public Flashlight() : base("flashlight")
-    {
+    private bool flashlightOn = false;
 
+    private void Start()
+    {
+        this.type = ToolType.FLASHLIGHT;
+    }
+
+    public override void InteractAction(ToolType type)
+    {
+        if (type != ToolType.FLASHLIGHT) return;
+        this.gameObject.SetActive(!flashlightOn);
+        flashlightOn = !flashlightOn;
     }
 }

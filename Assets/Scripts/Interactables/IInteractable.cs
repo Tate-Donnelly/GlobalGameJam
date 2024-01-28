@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void InteractAction();
+    void InteractAction(ToolType type);
 }

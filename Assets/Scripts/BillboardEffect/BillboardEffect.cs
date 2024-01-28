@@ -28,19 +28,19 @@ public class BillboardEffect : MonoBehaviour
                 transform.LookAt(Camera.main.transform.position, Vector3.up);
                 break;
             case BillboardType.CameraForward:
-                transform.forward = new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z);
+                transform.forward = Camera.main.transform.forward;
                 break;
             default:
                 break;
         }
 
-        /*
+        
         // Modify the rotation in Euler space to lock certain dimensions
         Vector3 rotation = transform.rotation.eulerAngles;
         if (lockX) { rotation.x = originalRotation.x; }
         if (lockY) { rotation.y = originalRotation.y; }
         if (lockZ) { rotation.z = originalRotation.z; }
         transform.rotation = Quaternion.Euler(rotation);
-        */
+        
     }
 }

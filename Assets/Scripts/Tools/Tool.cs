@@ -1,13 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tool
+public enum ToolType
 {
-    public string name;
+    HAND,
+    KNIFE,
+    FLASHLIGHT,
+    KEY
+}
 
-    public Tool(string name)
-    {
-        this.name = name;
-    }
+public abstract class Tool : MonoBehaviour
+{
+    public ToolType type;
+
+    public abstract void InteractAction(ToolType type);
 }
