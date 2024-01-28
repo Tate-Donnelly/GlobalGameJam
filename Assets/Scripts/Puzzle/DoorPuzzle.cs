@@ -7,6 +7,7 @@ public class DoorPuzzle : MonoBehaviour
     private void OnDoorUnlocked(object sender, FlagArgs flagArgs)
     {
         if (flagArgs.flag != PuzzleFlag.KEY) return;
+        
         Debug.Log("Game End");
     }
 
