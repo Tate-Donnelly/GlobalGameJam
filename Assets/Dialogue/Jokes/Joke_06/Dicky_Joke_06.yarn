@@ -3,21 +3,18 @@
 //possible punchlines are bolded and in red
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: So. Listen up, here, listen up.
 
 Dicky: Obviously, the road of the comedian is one full of ups and downs. It’s not an easy gig, right?
 
-<<PlayEffect Sway>>
+<<PlayEffect Dicky_Obj Sway>>
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Maaaybe more downs than up. I mean, look at me, right? I’m a mess. Haha.
 
-<<CueLaugh false>>
-
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: Anyway, you don’t get a lot of good gigs as a comedian, right? And you need some ways to pay the bills.
 
@@ -25,17 +22,14 @@ Dicky: Gotta get some odd jobs here and there while you work on getting the next
 
 Dicky: And you don’t know when that next show is! I mean, there’s no guarantee you can ever make it, right?
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 Dicky: You just don’t know! Honestly, it’s really bad for your heart and your mind! Like you’re an unwanted rut!
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 Dicky: Anyway, one of the jobs I had to take while waiting for the next call. It was one of those associate mechanic jobs at a car dealership.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Real boring stuff, let me tell you. I might as well been a kid again holding a flashlight for my father!
-
-<<CueLaugh false>>
 
 Dicky: Really, there was no difference, let me tell you.
 
@@ -44,13 +38,10 @@ Dicky: Every morning at exactly 5am I’d come in and have to work with this rea
 Dicky: And I got used to working with him, honestly.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: He’d just point at something and mumble under his breath “hmrmn mhrnm mhrm,” and I’d go “Yup! Got it!” and just hand him whatever we was pointing at.
 
 <<Punchline Dicky>>
 Dicky: Never had to understand a single word he was saying! Just “Yup! Got it! Here you go!”
-
-<<CueLaugh false>>
 
 Dicky: Then one day he called out sick, and I was paired up with someone who didn’t exactly abide by our nice pointy system.
 
@@ -62,28 +53,22 @@ Dicky: So, first car comes in, and I just pray to God he doesn’t ask me for an
 
 Dicky: Of course, the time comes, he asks for something. And I hand him whatever sounded right.
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Next thing you know, YEEOOOWCH, the car radiator is on his foot.
 
-<<CueLaugh false>>
-
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: Needless to say, not only was I out of a job, I had to cover the man’s medical bills!
 
 Dicky: But let me tell you this, let me tell you this.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Even if I handed him the wrong tool, how the Hell is it my fault the car radiator ends up on his foot? 
 
 <<Punchline Dicky>>
 Dicky: Like how do you mess up that bad? Right, right?
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===

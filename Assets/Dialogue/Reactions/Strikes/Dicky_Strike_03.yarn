@@ -3,7 +3,7 @@
 //each strike is modularized into an individual node
 ---
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 <<PlayEffect JumpRepeat>>
 
 Dicky: You’re all the same! All the same! You’re fucking done! Done! AGH!

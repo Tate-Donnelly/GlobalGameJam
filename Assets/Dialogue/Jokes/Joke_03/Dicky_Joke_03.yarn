@@ -3,7 +3,7 @@
 //possible punchlines are bolded and in red
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: Alright. Alright. Listen up.
 
@@ -14,26 +14,20 @@ Dicky: You see, my high school wasn’t exactly the best. Not the best, I’m te
 Dicky: Let’s face it, secondary education in this country–hell this city–isn’t exactly great.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: The kids come out of our schools knowing more about what Brad and Jenny were up to than anything else! It’s a disgrace!
 
 <<Punchline Dicky>>
 Dicky: And It’s not like I could relate to any of that, right? I mean, look at me, c’mon!
-
-<<CueLaugh false>>
 
 Dicky: Anyway, yeah, I wasn’t exactly the most popular kid at school.
 
 Dicky: That guy Brad? He always had an entourage because he was our “star quarterback.”
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: “Star quarterback,” my ass, he couldn’t even tell left from right!
 
 <<Punchline Dicky>>
 Dicky: I mean, no wonder our team couldn’t even beat a Pop Warner squad with their helmets screwed on backwards if they tried!
-
-<<CueLaugh false>>
 
 Dicky: I mean, seriously, now, c’mon.
 
@@ -55,27 +49,21 @@ Dicky: Anyway, I sneak in there when it’s time. And I do what I’ve always wa
 
 Dicky: You know, you see it a lot in crappy cartoons and movies about high school, but to the nerds like me.
 
-<<ChangeSprite Mad>>
-<<PlayEffect Jump>>
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: I slam him into an open locker, close it on him, and just yell out “YEAH HOW DOES THAT FEEL?”
 
-<<CueLaugh false>>
-
-<<ChangeSprite Talk>>
-<<PlayEffect Still>>
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: And, well, he never did that to me, or anyone really. 
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: But I just wanted to feel that moment where the nerd wins for once, you know what I mean? Haha!
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===
 

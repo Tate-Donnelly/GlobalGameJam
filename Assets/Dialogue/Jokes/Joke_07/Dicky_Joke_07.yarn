@@ -3,7 +3,7 @@
 //possible punchlines are bolded and in red
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: Alright. Let me tell you something.
 
@@ -11,9 +11,9 @@ Dicky: Let me tell you about the day that I decided to become a comedian. Made i
 
 Dicky: It was a momentous day, a momentous day. 
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 Dicky: The middle school talent show!
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: I mean, you can already imagine it, right? 
 
@@ -21,19 +21,16 @@ Dicky: A little scrawny kid in suspenders and bowtie about to tell jokes to a bu
 
 Dicky: You’d think, if that’s the day I decided to do this for a living, I must have knocked it out of the park!
 
-<<PlayEffect Sway>>
+<<PlayEffect Dicky_Obj Sway>>
 Dicky: Right? Right?
 
-<<ChangeSprite Mad>>
-<<PlayEffect Jump>>
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: No! A teacher had to pick me up by the suspenders and wedgie me off backstage!
 
-<<CueLaugh false>>
-
-<<ChangeSprite Talk>>
-<<PlayEffect Still>>
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
 Dicky: I mean, it was brutal! Brutal!
 
 Dicky: And let me tell you how I messed up so bad.
@@ -43,10 +40,7 @@ Dicky: The day before, I saw that same teacher mingling a little too close with 
 Dicky: And even with my kid brain I knew exactly what was going on.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Then my little pee-wee brain thought, “Huh! I should tell a joke about that tomorrow!”
-
-<<CueLaugh false>>
 
 Dicky: So I did. And it went a little something like this:
 
@@ -58,26 +52,20 @@ Dicky: So, I’m up there on stage and I start off: “Hey, I saw Ms. Bottom and
 
 Dicky: “I think he wants to get a Feel of her Bottom!”
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Immediately after I said it, I couldn’t even see the parents gasp, I just saw my face hit the backstage floor! Haha.
-
-<<CueLaugh false>>
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: Anyway, I was saying that was the night I decided to be a comedian, yeah?
 
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 Dicky: …
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: What was I going on about, again?
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===

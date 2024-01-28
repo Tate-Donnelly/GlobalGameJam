@@ -2,12 +2,12 @@
 //Trigger: player blinds Dicky by messing with the lights
 ---
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 
 Dicky: HEY! I can’t see a thing! Who messed with the lights?
 
 Dicky: Aw, fuck. You better still be there! I can hear you!
 
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===

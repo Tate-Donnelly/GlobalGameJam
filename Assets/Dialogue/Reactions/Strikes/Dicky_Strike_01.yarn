@@ -3,16 +3,16 @@
 //each strike is modularized into an individual node
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: Hey now! Hey now! It’s a comedy show! You have to laugh at the right time!
 
 Dicky: Maybe you just didn’t get it. I’ll let it slide just this once. Just this once.
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 Dicky: Don’t screw up again! Alright?
 
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===
 

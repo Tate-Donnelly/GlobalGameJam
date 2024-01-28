@@ -3,39 +3,33 @@
 //possible punchlines are bolded and in red
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 Dicky: Okay, Okay. Listen up.
 
 Dicky: My father, yeah? He wasn’t a great guy. Listen to me. Not a great guy!
 
-<<ChangeSprite Mad>>
-<<PlayEffect Jump>>
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
 Dicky: No, he was a terrible guy. Terrible! I mean.
 
-<<ChangeSprite Talk>>
-<<PlayEffect Still>>
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Look at me! There’s a reason I’m standing up here looking like an ass, right? Haha!
-
-<<CueLaugh false>>
 
 Dicky: Needless to say, I wasn’t exactly the saddest chap when he passed away.
 
 Dicky: But let me be honest here. Let me be honest. I did put up quite a cry at his funeral.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Goes to show how great of an actor I am, huh? Haha!
 
-<<PlayEffect Sway>>
+<<PlayEffect Dicky_Obj Sway>>
 <<Punchline Dicky>>
 Dicky: I only did it for the family, you know what I mean? Haha!
 
-<<CueLaugh false>>
-
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: For real though, for real. Listen to me. Listen to me.
 
@@ -46,31 +40,25 @@ Dicky: Don’t worry, you’ll get to know what my Precious was.
 Dicky: Anyway, one day I come home from a long day of elementary school.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: You know, just one of those days you need an ice cold Capri-Sun and some cheese and crackers, right?
-
-<<CueLaugh false>>
 
 Dicky: So I come in the house, up to my room, and I just see him sitting on my bed all deadfaced.
 
 Dicky: And I knew exactly what happened. He didn’t have to say anything.
 
-<<ChangeSprite Mad>>
-<<PlayEffect Jump>>
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
 Dicky: He found my Precious. I can’t believe it! UGHH!
 
-<<ChangeSprite Talk>>
-<<PlayEffect Still>>
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
 Dicky: He got right down to it. He said, “Son, why are you keeping a dead rat in a shoebox under your bed?”
 
 Dicky: “You know kids who do that become deranged, right?”
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: So I said, “How did you know that’s exactly what I want to be when I grow up?” Haha!
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===

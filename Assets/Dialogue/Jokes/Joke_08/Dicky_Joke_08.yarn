@@ -3,7 +3,7 @@
 //possible punchlines are bolded and in red
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: Okay. Alright. Listen to this.
 
@@ -20,13 +20,10 @@ Dicky: This one night we decided to get together and have dinner, it was the fir
 Dicky: We went out to this steakhouse down by Luxe Street.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: And it’s Luxe Street, so you already know we don’t belong there at all. Haha.
 
 <<Punchline Dicky>>
 Dicky: Showing up in the same blazer with the hole in the armpits my grandfather had. Haha.
-
-<<CueLaugh false>>
 
 Dicky: Anyway, yeah, it was a real nice place, but my sister told me she was gonna make a “special request to the chef” cuz it was our first time together in so long.
 
@@ -44,26 +41,21 @@ Dicky: And she says, “Yeah, I had a funny guy handle the steak for my funny gu
 
 Dicky: And she goes on to explain the whole process she did for my steak, while I’m eating this thing up.
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: And then I realize–the funny guy put funny stuff in my funny steak!
 
-<<CueLaugh false>>
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 Dicky: Lord! She was truly mad!
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 Dicky: I swear I was over the toilet for the rest of the night.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Needless to say, that was the final time I ever let my sister handle my food!
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===

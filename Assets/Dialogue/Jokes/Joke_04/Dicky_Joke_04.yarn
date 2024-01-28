@@ -3,7 +3,7 @@
 //possible punchlines are bolded and in red
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: Hey, hey, hey. Listen to this.
 
@@ -13,23 +13,20 @@ Dicky: Whatever I liked at like age five or six, she just kept thinking I would 
 
 Dicky: It didn’t matter what I kept saying to her! I had to still be a fan of G.I. Shmoe at age seventeen, right?
 
-<<PlayEffect Sway>>
+<<PlayEffect Dicky_Obj Sway>>
 Dicky: I mean, if I said otherwise under my breath, she’d just turn around and WHOOSH!
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Throw a sandal right at my face!
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 
 <<Punchline Dicky>>
 Dicky: WHOOSH! Like a pro axe thrower, that woman! Haha!
 
-<<CueLaugh false>>
-
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: Alright, alright. But my mother was getting me G. I. Shmoes every Christmas, right?
 
@@ -41,11 +38,11 @@ Dicky: It was Lock n’ Load. Coolest G. I. Shmoe out there, anyone else had one
 
 Dicky: Yeah, but my mother, she’d always bring some of her friends and their kids over, right?
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 
 Dicky: Those pricks, they never even bothered with me, they went straight for my G. I. Shmoe collection!
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: Anyway, for that reason, one here and there would always go missing. But I didn’t bother cuz they weren’t Lock n’ Load.
 
@@ -53,20 +50,17 @@ Dicky: Then, one day, this kid Rosie comes over.
 
 Dicky: She steps out of my room to go to my sister’s room, and I notice Lock n’ Load was gone.
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 
 Dicky: How dare she!
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: So I didn’t even bother with courtesy, i just BAM! Welcomed myself right in that room!
 
-<<CueLaugh false>>
-
-<<ChangeSprite Talk>>
-<<PlayEffect Still>>
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
 
 Dicky: And you know what I see?
 
@@ -76,19 +70,16 @@ Dicky: I thought, “Alright, we’re just playing with dolls now,” and I had 
 
 Dicky: So, I took him and did my best G. I. Shmoe impression.
 
-<<PlayEffect Sway>>
+<<PlayEffect Dicky_Obj Sway>>
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: “Hey, baby, mind if I join in?”
 
 <<Punchline Dicky>>
 Dicky: “If you’re Loading up with him, let me Lock myself with you, huh?”
 
-<<PlayEffect Still>>
+<<PlayEffect Dicky_Obj Still>>
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===

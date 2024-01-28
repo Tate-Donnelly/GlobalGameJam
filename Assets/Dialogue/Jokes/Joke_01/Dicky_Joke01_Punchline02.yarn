@@ -2,7 +2,7 @@
 tags:
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 
 Dicky: Anyway, do you know what Lewis Street was called before it was called Lewis Street?
 
@@ -11,11 +11,8 @@ Dicky: Crack Street!
 Dicky: Take a guess at why the city decided to name a street Crack Street.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: No, no, get your head out of the gutter. Not that!
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===
