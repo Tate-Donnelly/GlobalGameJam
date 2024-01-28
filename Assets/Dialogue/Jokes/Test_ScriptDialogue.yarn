@@ -22,7 +22,7 @@ I will perform my routine, and whenever I want you to laugh–
 <<PlayEffect Dicky_Obj Sway>>
 Laugh! Laugh like you mean it!
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 <<PlayEffect Dicky_Obj GrowShrink>>
 And no funny business either! I’ll know.
 
@@ -31,6 +31,7 @@ Try anything or mess up your cue, and you know exactly what’s coming, buddy.
 <<ChangeSprite Dicky_Obj Idle>>
 
 So. Shall we get on with the show?
+<<PlayRandomJoke Dicky>>
 ===
 
 title: Joke1Sub1

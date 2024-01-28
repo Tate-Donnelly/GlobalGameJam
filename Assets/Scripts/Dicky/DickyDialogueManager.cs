@@ -43,6 +43,7 @@ namespace Dicky
             });
 
             _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
+            _dialogueRunner.AddCommandHandler("PlayRandomJoke", (GameObject target) => { PlayRandomJoke(); });
 
             //PlayRandomJoke();
             _dialogueRunner.StartDialogue("Intro");

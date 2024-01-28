@@ -15,10 +15,7 @@ Dicky: It’s an odd name, I admit, I admit.
 Dicky: But honest to God. I’ve never seen a meat delivery truck go to that pizza place.
 
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: I guess we know where Slice n’ Dice is collecting their meatballs, huh? Haha!
-
-<<CueLaugh false>>
 
 <<ChangeSprite Talk>>
 
