@@ -21,6 +21,7 @@ namespace Dicky
         [SerializeField] private List<JokeSO> _usedJokes = new List<JokeSO>();
         
         //Internal
+        private Queue<Reaction> reactionQue = new Queue<Reaction>();
         private DialogueSO _currentDialogueData;
         private float dialoguePauseTimer;
         private float dialogueTimer;
@@ -38,7 +39,7 @@ namespace Dicky
             });
             _laughDetection.onLaughedOutsidePunchline.AddListener(delegate
             {
-                StartCoroutine(WaitForJokeToEnd(Reaction.LaughedOutsideOfPunchline));
+                QueueReaction(Reaction.LaughedOutsideOfPunchline);
             });
 
             _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
@@ -53,13 +54,6 @@ namespace Dicky
             {
                 dialoguePauseTimer -= Time.deltaTime;
                 if (dialoguePauseTimer <= 0) PlayRandomJoke();
-            }else if (laughterTimer > 0)
-            {
-                laughterTimer -= Time.deltaTime;
-                if (laughterTimer <= 0)
-                {
-                    if (!didLaugh) StartCoroutine(ReactToPunchlineResponse(Reaction.NoLaughter));
-                }
             }
         }
 
@@ -73,7 +67,10 @@ namespace Dicky
         {
             Random rand = new Random();
             int index = rand.Next(0, _unusedJokes.Count);
+            _laughDetection.RunJoke(_unusedJokes[index]);
             PlayDialogue(_unusedJokes[index]);
+            StartCoroutine(WaitForJokeToEnd());
+            
             laughterTimer = _unusedJokes[index].dialogueDuration;
             if (_unusedJokes.Count == 1)
             {
@@ -96,21 +93,26 @@ namespace Dicky
 
 
         #region React to Player
+
+        public void QueueReaction(Reaction reaction)
+        {
+            reactionQue.Enqueue(reaction);
+        }
         
         private void HeardLaughter()
         {
             if (laughterTimer == 0) return;
             laughterTimer = 0;
-            StartCoroutine(WaitForJokeToEnd(Reaction.LaughedDuringPunchline));
+            QueueReaction(Reaction.LaughedDuringPunchline);
         }
 
         [YarnCommand("Punchline")]
         private void Punchline()
         {
-            _laughDetection.RunPunchline(_currentDialogueData as JokeSO);
+            _laughDetection.RunPunchline();
         }
         
-        private IEnumerator WaitForJokeToEnd(Reaction reaction)
+        private IEnumerator WaitForJokeToEnd()
         {
             yield return new WaitUntil(() => !_dialogueRunner.IsDialogueRunning);
             _unusedJokes.Remove(_currentDialogueData as JokeSO);
@@ -123,13 +125,20 @@ namespace Dicky
 
             StopDialogue();
             
-            StartCoroutine(ReactToPunchlineResponse(reaction));
+            StartCoroutine(ReactToPunchlineResponse());
         }
 
-        private IEnumerator ReactToPunchlineResponse(Reaction reaction)
+        private IEnumerator ReactToPunchlineResponse()
         {
-            print("React");
             //Get dialogue based on reaction
+            Reaction reaction;
+            if (!_laughDetection.hasLaughed) reaction = Reaction.NoLaughter;
+            else
+            {
+                reaction = reactionQue.Dequeue();
+                reactionQue.Clear();
+            }
+            
             //TODO Check flags for appropriate reaction
             _currentDialogueData = _reactionsToPlayer[reaction].GetReaction(0);
             PlayDialogue(_currentDialogueData);

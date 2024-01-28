@@ -20,7 +20,7 @@ public class ManualLaugh : MonoBehaviour
     {
         if(allowManualLaugh)
         {
-            laughDetection.OnHasLaughed(new CapturedPlayerResponse(DateTime.Now));
+            laughDetection.ManualLaugh();
             onManualLaughed?.Invoke();
         }
     }

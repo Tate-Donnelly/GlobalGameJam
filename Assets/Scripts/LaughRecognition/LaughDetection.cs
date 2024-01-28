@@ -26,12 +26,6 @@ public class LaughDetection : MonoBehaviour
     [SerializeField]
     private StreamingAssetsLanguageModelProvider languageModelProvider;
 
-    /*[SerializeField]
-    private InputField status;
-
-    [SerializeField]
-    private Text hearStatus;*/
-
     [Header("Callbacks")]
     [SerializeField] public UnityEvent onLaughedDuringPunchline;
     [SerializeField] public UnityEvent onLaughedOutsidePunchline;
@@ -42,8 +36,8 @@ public class LaughDetection : MonoBehaviour
     private JokeSO currentJoke;
     private bool speechRunning;
     private float responseDelayBuffer = 0;
-    public bool punchlineDelivered;
-    public bool laughedDuringPunchline;
+    public DateTime laughed;
+    public bool hasLaughed;
 
     //Timer
     private float punchlineTimer;
@@ -90,12 +84,17 @@ public class LaughDetection : MonoBehaviour
         }
     }
     
-    public void RunPunchline(JokeSO joke)
+    public void RunJoke(JokeSO joke)
     {
+        hasLaughed = false;
         currentJoke = joke;
+        capturedResponses = new List<CapturedPlayerResponse>();
+    }
+    
+    public void RunPunchline()
+    {
         punchlineStartTime = DateTime.Now;
         punchlineTimer = currentJoke.punchlineBufferTime;
-        capturedResponses = new List<CapturedPlayerResponse>();
     }
 
     private void InitializeActivityDetector()
@@ -124,7 +123,6 @@ public class LaughDetection : MonoBehaviour
         });
         activityDetector.StartProcessing();
     }
-    
 
 
     private void CheckIfLaugh(CapturedPlayerResponse response)
@@ -133,41 +131,35 @@ public class LaughDetection : MonoBehaviour
         {
             if (response.responseText.Contains(laugh))
             {
-                print("HeardLaughter");
-                if (punchlineDelivered)
-                {
-                    print("Punchline");
-                    punchlineDelivered = false;
-                    laughedDuringPunchline = true;
-                    onLaughedDuringPunchline?.Invoke();
-                }else 
-                {
-                    print("Not during punchline");
-                    laughedDuringPunchline = false;
-                    onLaughedOutsidePunchline?.Invoke();
-                }
-                OnHasLaughed(response);
+                laughed = response.startTime;
+                OnHasLaughed();
                 return;
             }
         }
         onLaughedOutsidePunchline?.Invoke();
     }
 
+    public void ManualLaugh()
+    {
+        laughed=DateTime.Now;
+        OnHasLaughed();
+    }
+
     /// <summary>
     /// Call this with a player response to determine if we hit the punchline
     /// </summary>
-    /// <param name="response"></param>
-    public void OnHasLaughed(CapturedPlayerResponse response)
+    public void OnHasLaughed()
     {
+        hasLaughed = true;
         if (currentJoke == null) return;
-
-        if (punchlineTimer > 0)
-        {
-            onLaughedDuringPunchline?.Invoke();
-        }
-        else
+    
+        float diff=(float) laughed.Subtract(punchlineStartTime).TotalSeconds-currentJoke.punchlineBufferTime;
+        // If punchline started before response
+        if (diff>0 )
         {
             onLaughedOutsidePunchline?.Invoke();
+        }else{
+            onLaughedDuringPunchline?.Invoke();
         }
     }
 
