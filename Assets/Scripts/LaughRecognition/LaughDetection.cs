@@ -3,6 +3,7 @@ using Recognissimo.Components;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Dialogue;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,15 +26,9 @@ public class LaughDetection : MonoBehaviour
     [SerializeField]
     private StreamingAssetsLanguageModelProvider languageModelProvider;
 
-    [SerializeField]
-    private InputField status;
-
-    [SerializeField]
-    private Text hearStatus;
-
     [Header("Callbacks")]
-    [SerializeField]private UnityEvent onLaughedDuringPunchline;
-    [SerializeField]private UnityEvent onLaughedOutsidePunchline;
+    [SerializeField] public UnityEvent onLaughedDuringPunchline;
+    [SerializeField] public UnityEvent onLaughedOutsidePunchline;
 
     //Joke Stuff
     [Header("Joke Stuff")]
@@ -41,6 +36,8 @@ public class LaughDetection : MonoBehaviour
     private JokeSO currentJoke;
     private bool speechRunning;
     private float responseDelayBuffer = 0;
+    public DateTime laughed;
+    public bool hasLaughed;
 
     //Timer
     private float punchlineTimer;
@@ -86,31 +83,29 @@ public class LaughDetection : MonoBehaviour
             punchlineTimer -= Time.deltaTime;
         }
     }
-
-    #region Initialization
+    
     public void RunJoke(JokeSO joke)
     {
+        hasLaughed = false;
         currentJoke = joke;
         UpdateStatus("");
         punchlineStartTime = DateTime.Now;
         punchlineTimer = currentJoke.punchlineBufferTime;
-        capturedResponses = new List<CapturedPlayerResponse>();
+        punchlineStartTime = DateTime.Now;
+        punchlineTimer = currentJoke.punchlineBufferTime;
     }
 
     private void InitializeActivityDetector()
     {
         activityDetector.TimeoutMs = 0;
         activityDetector.Spoke.AddListener(() => {
-            hearStatus.text = "<color=green>Speech</color>";
             if(!speechRunning)
             {
-                UpdateStatus("Laugh!");
                 speechRunning = true;
                 currentResponse = new CapturedPlayerResponse(DateTime.Now);
             }
         });
         activityDetector.Silenced.AddListener(() => {
-            hearStatus.text = "<color=red>Silence</color>";
             if (speechRunning)
             {
                 if (currentResponse != null)
@@ -121,14 +116,13 @@ public class LaughDetection : MonoBehaviour
                     CheckIfLaugh(currentResponse);
                 }
                 _recognizedText.Clear();
-                UpdateStatus("");
                 speechRunning = false;
             }
         });
-        activityDetector.InitializationFailed.AddListener(e => hearStatus.text = e.Message);
         activityDetector.StartProcessing();
     }
     #endregion
+
 
     private void CheckIfLaugh(CapturedPlayerResponse response)
     {
@@ -136,34 +130,41 @@ public class LaughDetection : MonoBehaviour
         {
             if (response.responseText.Contains(laugh))
             {
-                OnHasLaughed(response);
+                laughed = response.startTime;
+                OnHasLaughed();
                 return;
             }
         }
         onLaughedOutsidePunchline?.Invoke();
     }
 
+    public void ManualLaugh()
+    {
+        laughed=DateTime.Now;
+        OnHasLaughed();
+    }
+
     /// <summary>
     /// Call this with a player response to determine if we hit the punchline
     /// </summary>
-    /// <param name="response"></param>
-    public void OnHasLaughed(CapturedPlayerResponse response)
+    public void OnHasLaughed()
     {
+        hasLaughed = true;
         if (currentJoke == null) return;
-
-        if (punchlineTimer > 0)
-        {
-            onLaughedDuringPunchline?.Invoke();
-        }
-        else
+    
+        float diff=(float) laughed.Subtract(punchlineStartTime).TotalSeconds-currentJoke.punchlineBufferTime;
+        // If punchline started before response
+        if (diff>0 )
         {
             onLaughedOutsidePunchline?.Invoke();
+        }else{
+            onLaughedDuringPunchline?.Invoke();
         }
     }
 
     private void UpdateStatus(string text)
     {
-        status.text = text;
+        //status.text = text;
     }
 
     private void OnPartialResult(PartialResult partial)

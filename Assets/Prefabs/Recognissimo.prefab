@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3474171049711107975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458668046210764942}
+  - component: {fileID: 32641912140218370}
+  - component: {fileID: 5541929827985889908}
+  - component: {fileID: 3531182090170634103}
+  - component: {fileID: 9219779566746490874}
+  - component: {fileID: 5875598290190091563}
+  m_Layer: 0
+  m_Name: Recognissimo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1458668046210764942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474171049711107975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &32641912140218370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474171049711107975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266ce9b057b6440581c95db267c37bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: 10
+  languageModels:
+  - language: 10
+    path: LanguageModels/en-US
+  - language: 15
+    path: LanguageModels/de-DE
+  - language: 14
+    path: LanguageModels/fr-FR
+  - language: 30
+    path: LanguageModels/ru-RU
+  - language: 34
+    path: LanguageModels/es-ES
+--- !u!114 &5541929827985889908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474171049711107975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287ca7c445144a2cb27e920ea15200eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordingSettings:
+    deviceName: 
+    timeSensitivity: 0.25
+--- !u!114 &3531182090170634103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474171049711107975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67e36f5775944789a2ba09562c530ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generalSettings:
+    modelProvider: {fileID: 32641912140218370}
+    speechSource: {fileID: 5541929827985889908}
+    autoStart: 1
+  lifecycleEvents:
+    started:
+      m_PersistentCalls:
+        m_Calls: []
+    finished:
+      m_PersistentCalls:
+        m_Calls: []
+    initializationFailed:
+      m_PersistentCalls:
+        m_Calls: []
+    runtimeFailed:
+      m_PersistentCalls:
+        m_Calls: []
+  settings:
+    vocabulary: []
+    enableDetails: 0
+    alternatives: 0
+    partialResultReady:
+      m_PersistentCalls:
+        m_Calls: []
+    resultReady:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &9219779566746490874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474171049711107975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6604ebc4a3aeda3428e2a8d2b05c07c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activityDetector: {fileID: 5875598290190091563}
+  recognizer: {fileID: 3531182090170634103}
+  languageModelProvider: {fileID: 32641912140218370}
+  onLaughedDuringPunchline:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLaughedOutsidePunchline:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  possibleLaughs:
+  - ha
+  - ah
+  - up
+  - tee
+  - hee
+  - her
+  - have
+  - oh
+  - ho
+  - funny
+  - wow
+  - amazing
+--- !u!114 &5875598290190091563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474171049711107975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7723096500384cbf8e0f6f4aba721435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generalSettings:
+    modelProvider: {fileID: 32641912140218370}
+    speechSource: {fileID: 5541929827985889908}
+    autoStart: 0
+  lifecycleEvents:
+    started:
+      m_PersistentCalls:
+        m_Calls: []
+    finished:
+      m_PersistentCalls:
+        m_Calls: []
+    initializationFailed:
+      m_PersistentCalls:
+        m_Calls: []
+    runtimeFailed:
+      m_PersistentCalls:
+        m_Calls: []
+  settings:
+    timeoutMs: 0
+    spoke:
+      m_PersistentCalls:
+        m_Calls: []
+    silenced:
+      m_PersistentCalls:
+        m_Calls: []

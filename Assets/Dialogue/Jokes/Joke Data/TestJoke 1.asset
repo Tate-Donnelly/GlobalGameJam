@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
-  m_Name: TestJoke
+  m_Name: TestJoke 1
   m_EditorClassIdentifier: 
-  jokeString: Why did the chicken cross the road? To get to the other side.
-  punchlineString: To get to the other side.
-  jokeDuration: 0
-  punchlineBufferTime: 10
-  punchlineRange: {x: 3.5, y: 7}
-  jokeClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
+  yarnNodeName: TEST1
+  dialogueDuration: 15
+  dialogueClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
+  punchlineBufferTime: 5
