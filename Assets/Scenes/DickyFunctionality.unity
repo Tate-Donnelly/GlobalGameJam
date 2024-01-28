@@ -278,6 +278,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756265306006942931, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756265306006942931, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -298,7 +302,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756265306416826117, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756265306416826117, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756265306416826117, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756265306416826117, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756265306416826117, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756265306761440433, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
@@ -10480,20 +10500,20 @@ PrefabInstance:
       objectReference: {fileID: 123843000}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _unusedJokes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _unusedJokes.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 9162b115871c9044696805eac011eb26, type: 2}
+      objectReference: {fileID: 11400000, guid: 064ae92e7309b5045854f5271f13c55d, type: 2}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _unusedJokes.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 1fb20ba7446bc4b4aab36d89a2d89990, type: 2}
+      objectReference: {fileID: 11400000, guid: ca80193705913da418bad2c79377c96e, type: 2}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _unusedJokes.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: d4ab260562a78b8429af502277c7a584, type: 2}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _reactionsToPlayer._serializedList.Array.size
       value: 9
