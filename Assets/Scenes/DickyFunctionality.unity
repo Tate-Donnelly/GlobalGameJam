@@ -10559,6 +10559,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionDialogue.Array.size
       value: 3
       objectReference: {fileID: 0}

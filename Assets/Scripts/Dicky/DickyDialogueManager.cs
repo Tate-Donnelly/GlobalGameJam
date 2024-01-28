@@ -50,8 +50,8 @@ namespace Dicky
             _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
             _dialogueRunner.AddCommandHandler("PlayRandomJoke", (GameObject target) => { PlayRandomJoke(); });
             _dialogueRunner.AddCommandHandler("StartRoutine", (GameObject target) => { StartCoroutine(StartRoutineIEnumerator());; });
-
-            //PlayRandomJoke();
+            _dialogueRunner.AddCommandHandler("KillPlayer", (GameObject target) => { KillPlayer(); });
+            
             _dialogueRunner.StartDialogue("Dicky_Intro");
         }
 
@@ -75,6 +75,7 @@ namespace Dicky
         [YarnCommand("PlayRandomJoke")]
         private void PlayRandomJoke()
         {
+            if(stopTellingJokes) return;
             Random rand = new Random();
             int index = rand.Next(0, _unusedJokes.Count);
             _currentJokeGroup = _unusedJokes[index];
@@ -94,6 +95,7 @@ namespace Dicky
 
         private void PlayNextGroupJoke(JokeSO joke)
         {
+            if(stopTellingJokes) return;
             PlayDialogue(joke);
             StartCoroutine(WaitForJokeToEnd());
         }
@@ -112,6 +114,11 @@ namespace Dicky
 
 
         #region React to Player
+        
+        private void KillPlayer()
+        {
+            CutOffDialogue();
+        }
 
         public void QueueReaction(Reaction reaction)
         {
@@ -155,7 +162,6 @@ namespace Dicky
             else
             {
                 reaction = reactionQue.Dequeue();
-                print(reaction.ToString());
                 reactionQue.Clear();
             }
             
@@ -213,6 +219,7 @@ namespace Dicky
 
         public void CutOffDialogue()
         {
+            dlgAudioSource.loop = false;
             stopTellingJokes = true;
             dlgAudioSource.Stop();
             _dialogueRunner.Stop();

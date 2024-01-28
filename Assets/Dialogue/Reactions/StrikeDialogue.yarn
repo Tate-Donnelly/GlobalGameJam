@@ -27,6 +27,7 @@ tags:
 <<ChangeSprite Dicky_Obj Mad>>
 <<PlayEffect Dicky_Obj GrowShrink>>
 You’re all the same! All the same! You’re done! Done! AGH!
+<<KillPlayer Dicky>>
 ===
 
 title: NoLaughReaction1

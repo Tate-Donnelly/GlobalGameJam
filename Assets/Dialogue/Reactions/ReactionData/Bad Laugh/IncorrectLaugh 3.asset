@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnNodeName: GameOver
   dialogueDuration: 10
-  dialogueClip: {fileID: 0}
+  dialogueClip: {fileID: 8300000, guid: 53f28fc31a61a514281d42fc3b24e513, type: 3}
