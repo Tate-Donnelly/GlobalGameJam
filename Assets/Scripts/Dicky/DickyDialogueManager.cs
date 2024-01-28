@@ -29,7 +29,6 @@ namespace Dicky
         private bool didLaugh;
         private bool stopTellingJokes;
         
-        
         private void Awake()
         {
             //Event Subscribing

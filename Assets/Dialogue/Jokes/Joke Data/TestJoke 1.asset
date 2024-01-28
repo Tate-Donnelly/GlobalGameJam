@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JokeSO
   yarnNodeName: TEST1
   dialogueDuration: 15
-  dialogueClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
+  dialogueClip: {fileID: 0}
   punchlineBufferTime: 5
