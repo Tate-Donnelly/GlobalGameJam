@@ -377,6 +377,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 87ea464a-cb14-488f-9555-b54d7ee19a18
     m_ActionName: gameplay/pickup[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3df474bc-f5b5-497e-83b1-e9df1ba097e8
+    m_ActionName: gameplay/manuallaugh[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: gameplay
@@ -429,11 +433,13 @@ MonoBehaviour:
   controller: {fileID: 957137263243870781}
   cam: {fileID: 5765254248947747212}
   flashlight: {fileID: 5558544592166366765}
+  dickyTransform: {fileID: 0}
   inventory:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  dead: 0
 --- !u!1 &3882284557176522562
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3882284557176522562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.872, y: -0.246, z: 0.328}
+  m_LocalPosition: {x: 0.55, y: -0.246, z: 0.328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -781,6 +787,7 @@ GameObject:
   - component: {fileID: 5765254248947747212}
   - component: {fileID: 4965000217533769219}
   - component: {fileID: 3090223646694183373}
+  - component: {fileID: 7041598479783841297}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -867,3 +874,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 759c05e0d18bdcc44928a1cb36026c39, type: 2}
+--- !u!81 &7041598479783841297
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9048667907687475550}
+  m_Enabled: 1

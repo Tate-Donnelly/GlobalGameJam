@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         if (dead) return;
         if (!context.performed)
             return;
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 20);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 5);
         RaycastHit hitData;
         if (Physics.Raycast(ray, out hitData))
         {
@@ -249,11 +249,11 @@ public class PlayerController : MonoBehaviour
         UIManager.Instance.DisplayInteractable("");
         if (lastDetected != null)
             lastDetected.GetComponent<Outline>().enabled = false;
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 20);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction);
         RaycastHit hitData;
-        if (Physics.Raycast(ray, out hitData))
+        if (Physics.Raycast(ray, out hitData, 2f))
         {
-            if (hitData.collider.tag == "Interactable")
+            if (hitData.collider.tag == "Interactable" || hitData.collider.tag == "Pickup")
             {
                 //UI Manager does stuff
                 UIManager.Instance.DisplayInteractable(hitData.collider.name);

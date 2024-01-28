@@ -9,15 +9,20 @@ public enum PuzzleFlag {
    UNTIE,
    SANDBAG,
    KEY,
+   PLAYER_ESCAPE,
    PLAYER_DEATH,
-   PLAYER_ESCAPE
+   NONE // Used for cause of death
 };
 
+
+// Flag args, IF NOT DEATH THEN DEATH CAUSE WILL BE NONE
 public class FlagArgs : EventArgs {
     public PuzzleFlag flag {get; private set;}
-    
-    public FlagArgs(PuzzleFlag flag) {
+    public PuzzleFlag deathCause {get; private set;}
+
+    public FlagArgs(PuzzleFlag flag, PuzzleFlag deathCause) {
        this.flag = flag;
+       this.deathCause = deathCause;
     }
 }
 
@@ -41,13 +46,17 @@ public class FlagSystem : MonoBehaviour
     }
 
     public static void NotifyFlag(PuzzleFlag flag) {
-        instance.notifyFlag(flag);
+        instance.notifyFlag(flag, PuzzleFlag.NONE);
     }
 
-    private void notifyFlag(PuzzleFlag flag) {
+    public static void KillPlayer(PuzzleFlag deathCause) {
+        instance.notifyFlag(PuzzleFlag.PLAYER_DEATH, deathCause);
+    }
+
+    private void notifyFlag(PuzzleFlag flag, PuzzleFlag deathCause) {
         if(flagsNotified.Contains(flag)) return;
         flagsNotified.Add(flag);
-        var flagArgs = new FlagArgs(flag);
+        var flagArgs = new FlagArgs(flag, deathCause);
         OnFlagNotified?.Invoke(this, flagArgs);
         OnFlagNotifiedUnityEvent?.Invoke(flagArgs);
     }
