@@ -1,0 +1,15 @@
+﻿title: Dicky_CatchesPlayer_Flashlight
+//Trigger: player tries to use flashlight without dropping sandbags on Dicky and he sees
+---
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: What is that? A flashlight?
+
+Dicky: I can see that, buddy! You have nowhere to run!
+
+<<PlayEffect Dicky_Obj Jump>>
+
+Dicky: I’ll kill you where you stand! Perish!
+
+===

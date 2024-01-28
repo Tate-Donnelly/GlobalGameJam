@@ -1,0 +1,12 @@
+﻿title: Dicky_Joke03_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: I mean, no wonder our team couldn’t even beat a Pop Warner squad with their helmets screwed on backwards if they tried!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

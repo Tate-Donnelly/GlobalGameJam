@@ -1,0 +1,16 @@
+﻿title: Dicky_Joke08_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Mad>>
+Dicky: Lord! She was truly mad!
+
+<<ChangeSprite Dicky_Obj Talk>>
+Dicky: I swear I was over the toilet for the rest of the night.
+
+<<Punchline Dicky>>
+Dicky: Needless to say, that was the final time I ever let my sister handle my food!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

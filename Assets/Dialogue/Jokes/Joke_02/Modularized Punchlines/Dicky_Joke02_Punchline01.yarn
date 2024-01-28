@@ -1,0 +1,22 @@
+﻿title: Dicky_Joke02_Punchline01
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+Dicky: Okay, Okay. Listen up.
+
+Dicky: My father, yeah? He wasn’t a great guy. Listen to me. Not a great guy!
+
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
+Dicky: No, he was a terrible guy. Terrible! I mean.
+
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
+
+<<Punchline Dicky>>
+Dicky: Look at me! There’s a reason I’m standing up here looking like an ass, right? Haha!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

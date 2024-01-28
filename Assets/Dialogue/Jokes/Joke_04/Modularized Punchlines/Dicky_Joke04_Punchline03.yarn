@@ -1,0 +1,42 @@
+﻿title: Dicky_Joke04_Punchline03
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<PlayEffect Dicky_Obj Still>>
+
+Dicky: Alright, alright. But my mother was getting me G. I. Shmoes every Christmas, right?
+
+Dicky: So I had a whole bunch of ‘em! Couldn’t even keep track of them!
+
+Dicky: But there was one that I was particularly fond of. My favorite one.
+
+Dicky: It was Lock n’ Load. Coolest G. I. Shmoe out there, anyone else had one of him?
+
+Dicky: Yeah, but my mother, she’d always bring some of her friends and their kids over, right?
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: Those pricks, they never even bothered with me, they went straight for my G. I. Shmoe collection!
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Anyway, for that reason, one here and there would always go missing. But I didn’t bother cuz they weren’t Lock n’ Load.
+
+Dicky: Then, one day, this kid Rosie comes over.
+
+Dicky: She steps out of my room to go to my sister’s room, and I notice Lock n’ Load was gone.
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: How dare she!
+
+<<PlayEffect Dicky_Obj Jump>>
+
+<<Punchline Dicky>>
+Dicky: So I didn’t even bother with courtesy, i just BAM! Welcomed myself right in that room!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

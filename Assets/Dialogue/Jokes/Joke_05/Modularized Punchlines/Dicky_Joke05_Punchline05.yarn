@@ -1,0 +1,12 @@
+﻿title: Dicky_Joke05_Punchline05
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: Obviously the Scarpellis aren’t guilty of anything, it was just a climbing accident! Eh?
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

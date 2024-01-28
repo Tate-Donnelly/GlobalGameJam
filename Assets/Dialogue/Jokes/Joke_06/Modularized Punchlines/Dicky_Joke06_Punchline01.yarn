@@ -1,0 +1,20 @@
+﻿title: Dicky_Joke06_Punchline01
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: So. Listen up, here, listen up.
+
+Dicky: Obviously, the road of the comedian is one full of ups and downs. It’s not an easy gig, right?
+
+<<PlayEffect Dicky_Obj Sway>>
+
+<<Punchline Dicky>>
+Dicky: Maaaybe more downs than up. I mean, look at me, right? I’m a mess. Haha.
+
+<<PlayEffect Dicky_Obj Still>>
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

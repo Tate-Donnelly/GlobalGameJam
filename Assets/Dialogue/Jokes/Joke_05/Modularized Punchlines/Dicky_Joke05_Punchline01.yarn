@@ -1,0 +1,22 @@
+﻿title: Dicky_Joke05_Punchline01
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Okay, okay.
+
+Dicky: So. Mountains. We actually have a couple just beyond the city.
+
+Dicky: They’re cool, right? They’re cool. People like to take in a nice view of them, maybe take a pic or two, spend a whole day hiking up one.
+
+<<PlayEffect Dicky_Obj Sway>>
+
+<<Punchline Dicky>>
+Dicky: But, really, what is UP with them? Eh?
+
+<<PlayEffect Dicky_Obj Still>>
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

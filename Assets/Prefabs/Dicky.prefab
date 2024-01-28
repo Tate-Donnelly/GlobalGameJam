@@ -210,8 +210,7 @@ MonoBehaviour:
         reactionDialogue: []
     - Key: 1
       Value:
-        reactionDialogue:
-        - {fileID: 11400000, guid: bac1062389bc06043ad1c11501e35ed5, type: 2}
+        reactionDialogue: []
     - Key: 5
       Value:
         reactionDialogue: []

@@ -1,0 +1,26 @@
+﻿title: Dicky_Joke02_Punchline05
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: So I come in the house, up to my room, and I just see him sitting on my bed all deadfaced.
+
+Dicky: And I knew exactly what happened. He didn’t have to say anything.
+
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
+Dicky: He found my Precious. I can’t believe it! UGHH!
+
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
+Dicky: He got right down to it. He said, “Son, why are you keeping a dead rat in a shoebox under your bed?”
+
+Dicky: “You know kids who do that become deranged, right?”
+
+<<Punchline Dicky>>
+Dicky: So I said, “How did you know that’s exactly what I want to be when I grow up?” Haha!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

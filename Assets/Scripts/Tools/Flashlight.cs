@@ -9,6 +9,7 @@ public class Flashlight : Tool
     private Transform dickyTransform;
 
     private bool flashlightOn = false;
+    [SerializeField] AudioSource flashlightSFX;
     private int mask;
 
     private void Start()
@@ -26,7 +27,7 @@ public class Flashlight : Tool
             out hit, Mathf.Infinity, mask)) {
             return false;
         }
-        Debug.DrawLine(position, hit.transform.position, Color.white, 10.0f, true);
+        Debug.DrawLine(position, hit.point, Color.white, 10.0f, true);
         return hit.transform.gameObject == dickyTransform.gameObject;
     }
 
@@ -52,13 +53,15 @@ public class Flashlight : Tool
     public override void InteractAction(ToolType type)
     {
         if (type != ToolType.FLASHLIGHT) return;
-        this.gameObject.SetActive(!flashlightOn);
         flashlightOn = !flashlightOn;
+        flashlightSFX.Play();
+        this.gameObject.SetActive(flashlightOn);
     }
 
     void Update() {
         if (!flashlightOn) return;
         if (checkDickySeesLight()) {
+            Debug.Log("Killed");
             FlagSystem.KillPlayer(PuzzleFlag.KEY);
         }
     }

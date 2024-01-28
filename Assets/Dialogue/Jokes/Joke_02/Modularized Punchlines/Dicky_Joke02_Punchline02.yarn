@@ -1,0 +1,16 @@
+﻿title: Dicky_Joke02_Punchline02
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Needless to say, I wasn’t exactly the saddest chap when he passed away.
+
+Dicky: But let me be honest here. Let me be honest. I did put up quite a cry at his funeral.
+
+<<Punchline Dicky>>
+Dicky: Goes to show how great of an actor I am, huh? Haha!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

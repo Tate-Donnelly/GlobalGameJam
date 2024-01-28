@@ -1,0 +1,12 @@
+﻿title: Dicky_Joke06_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+<<Punchline Dicky>>
+Dicky: Never had to understand a single word he was saying! Just “Yup! Got it! Here you go!”
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

@@ -1,0 +1,15 @@
+﻿title: Dicky_Joke05_Punchline02
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: I mean really, really. Think about it. We have one of the most dangerous mountains in the country to summit right outside our city.
+
+Dicky: If you actually pay attention to the headlines, I swear you’ll see at least one reported climber death per year.
+
+<<Punchline Dicky>>
+Dicky: What, does the mountain need an annual sacrifice or something so it doesn’t avalanche into the city? Haha.
+
+<<ChangeSprite Dicky_Obj Idle>>
+===

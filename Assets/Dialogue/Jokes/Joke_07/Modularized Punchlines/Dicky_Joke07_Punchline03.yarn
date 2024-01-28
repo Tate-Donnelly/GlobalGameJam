@@ -1,0 +1,24 @@
+﻿title: Dicky_Joke07_Punchline03
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: So I did. And it went a little something like this:
+
+Dicky: Uh, for reference, the pair were named Ms. Bottom and Mr. Felt
+
+Dicky: I think you all know where this is going.
+
+Dicky: So, I’m up there on stage and I start off: “Hey, I saw Ms. Bottom and Mr. Felt getting real close in the hallways recently.”
+
+Dicky: “I think he wants to get a Feel of her Bottom!”
+
+<<PlayEffect Dicky_Obj Jump>>
+<<Punchline Dicky>>
+Dicky: Immediately after I said it, I couldn’t even see the parents gasp, I just saw my face hit the backstage floor! Haha.
+<<PlayEffect Dicky_Obj Still>>
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

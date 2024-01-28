@@ -1,0 +1,26 @@
+﻿title: Dicky_Joke08_Punchline01
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Okay. Alright. Listen to this.
+
+Dicky: So, my sister right?
+
+Dicky: She’s my little sister, I love her to death. Won’t let anything happen to her.
+
+Dicky: But ever since I became a comedian and started doing my night jobs, I’ve been out of the house and haven’t spent time with her.
+
+Dicky: And she’s also a little bit crazy right? In fact, I think she’s a little crazier than me, let me tell you.
+
+Dicky: This one night we decided to get together and have dinner, it was the first time we’ve hung out in probably two years.
+
+Dicky: We went out to this steakhouse down by Luxe Street.
+
+<<Punchline Dicky>>
+Dicky: And it’s Luxe Street, so you already know we don’t belong there at all. Haha.
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

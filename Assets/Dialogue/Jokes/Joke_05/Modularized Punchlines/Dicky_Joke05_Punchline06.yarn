@@ -1,0 +1,14 @@
+﻿title: Dicky_Joke05_Punchline06
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: That’s why they can’t get caught for anything! They’re not getting their hands dirty!
+
+<<Punchline Dicky>>
+Dicky: At this point, the mountain is probably a made man!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

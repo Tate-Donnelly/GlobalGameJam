@@ -1,0 +1,14 @@
+﻿title: Dicky_Strike_02
+//Trigger: player doesn’t laugh at right time for the second time
+//each strike is modularized into an individual node
+---
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: Did you not hear what I said, prick? Laugh. When. It’s. Time. To. Laugh.
+
+Dicky: It’s that freaking simple! I swear, one more time and you’ll end up like the rest!
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

@@ -1,0 +1,16 @@
+﻿title: Dicky_CatchesPlayer_Untying
+//Trigger: player tries to untie without blinding Dicky and he notices
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: It’s no use trying to get out. I can see you squirming. 
+
+Dicky: You look so pathetic. 
+
+<<ChangeSprite Dicky_Obj Mad>>
+
+Dicky: That’s not even a strike, it’s just game over for you, buddy. Bye!
+
+===
+

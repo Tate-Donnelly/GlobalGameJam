@@ -1,0 +1,18 @@
+﻿title: Dicky_Joke07_Punchline04
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Anyway, I was saying that was the night I decided to be a comedian, yeah?
+
+<<ChangeSprite Dicky_Obj Idle>>
+Dicky: …
+
+<<ChangeSprite Dicky_Obj Talk>>
+<<Punchline Dicky>>
+Dicky: What was I going on about, again?
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

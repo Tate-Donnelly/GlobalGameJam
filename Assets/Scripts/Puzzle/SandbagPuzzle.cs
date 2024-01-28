@@ -6,6 +6,9 @@ public class SandbagPuzzle : MonoBehaviour
 {
     [SerializeField] GameObject sandbag;
     [SerializeField] private float fallSpeed;
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip falling;
+    [SerializeField] AudioClip crash;
 
     private void OnRopeCut(object sender, FlagArgs flagArgs)
     {
@@ -25,6 +28,8 @@ public class SandbagPuzzle : MonoBehaviour
 
     private IEnumerator StartFall(float time)
     {
+        source.Play();
+        yield return new WaitForEndOfFrame();
         Vector3 startingPos = sandbag.transform.position;
         Vector3 finalPos = sandbag.transform.position + new Vector3(0, -4.98f, 0);
 
@@ -35,5 +40,7 @@ public class SandbagPuzzle : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        source.Stop();
+        source.PlayOneShot(crash, 0.6f);
     }
 }
