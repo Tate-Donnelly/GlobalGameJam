@@ -11,7 +11,7 @@ public class Hand : Tool
     public override void InteractAction(ToolType type)
     {
         if (type != ToolType.HAND) return;
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 20);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).direction * 5);
         RaycastHit hitData;
         if (Physics.Raycast(ray, out hitData))
         {
