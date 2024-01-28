@@ -25,6 +25,8 @@ public class DickyAnimationHandler : MonoBehaviour
 
     private void SetupYarnCommands()
     {
+        if (dialogueRunner == null) return;
+
         dialogueRunner.AddCommandHandler("ChangeSprite", (string spriteString) => ChangeSprite(spriteString));
         dialogueRunner.AddCommandHandler("PlayEffect", (string effectString) => ChangeSprite(effectString));
         dialogueRunner.AddCommandHandler("PlayStatus", (string statusString) => ChangeSprite(statusString));
