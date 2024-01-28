@@ -276,6 +276,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: da06c86f-143d-43ce-8f0b-005ea8eaf599
     m_ActionName: gameplay/interact[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dea1e6f4-f626-4a45-ba86-1c0c68af7248
+    m_ActionName: gameplay/inventory1[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 89ecb112-7b11-43bf-b436-0d460ef38b41
+    m_ActionName: gameplay/inventory2[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 63a0fe44-5280-49dd-9bd2-6c9bf47bc436
+    m_ActionName: gameplay/inventory3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 38eb6367-56d0-4fab-9a08-453b49231a0f
+    m_ActionName: gameplay/inventory3[/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87ea464a-cb14-488f-9555-b54d7ee19a18
+    m_ActionName: gameplay/pickup[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: gameplay
