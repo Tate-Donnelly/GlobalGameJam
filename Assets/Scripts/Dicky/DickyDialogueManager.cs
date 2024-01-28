@@ -29,6 +29,8 @@ namespace Dicky
         private float laughterTimer;
         private bool didLaugh;
         private bool stopTellingJokes;
+        private bool spotlightOn;
+        private bool sandbagFell;
         
         private void Start()
         {
@@ -145,7 +147,7 @@ namespace Dicky
             PlayDialogue(_currentDialogueData);
             yield return new WaitUntil(() => !_dialogueRunner.IsDialogueRunning);
             // TODO: Check Flags for player death
-            StopDialogue();
+            if(stopTellingJokes) StopDialogue();
             dialoguePauseTimer = timeBetweenJokes;
         }
 
@@ -155,16 +157,24 @@ namespace Dicky
             {
                 case PuzzleFlag.SWITCH:
                     // Player turns on spotlight
-                    break;
+                    QueueReaction(Reaction.SPOTLIGHT_ON);
+                    spotlightOn = true;
+                    return;
                 case PuzzleFlag.UNTIE:
                     // Player unties self
-                    break;
-                case PuzzleFlag.SANDBAG or PuzzleFlag.PLAYER_DEATH:
-                    stopTellingJokes = true;
+                    if(!spotlightOn) QueueReaction(Reaction.PLAYER_CAUGHT_UNTYING);
+                    return;
+                case PuzzleFlag.SANDBAG:
+                    CutOffDialogue();
+                    sandbagFell = true;
+                    return;
+                case PuzzleFlag.PLAYER_DEATH:
+                    CutOffDialogue();
                     return;
                 case PuzzleFlag.KEY:
                     // Player gets Key
-                    break;
+                    if(!sandbagFell) QueueReaction(Reaction.PLAYER_CAUGHT_BY_STAGE);
+                    return;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
