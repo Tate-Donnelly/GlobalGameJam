@@ -9,7 +9,8 @@ public enum PuzzleFlag {
    UNTIE,
    SANDBAG,
    KEY,
-   DEATH,
+   PLAYER_ESCAPE,
+   PLAYER_DEATH,
    NONE // Used for cause of death
 };
 
@@ -49,7 +50,7 @@ public class FlagSystem : MonoBehaviour
     }
 
     public static void KillPlayer(PuzzleFlag deathCause) {
-        instance.notifyFlag(PuzzleFlag.DEATH, deathCause);
+        instance.notifyFlag(PuzzleFlag.PLAYER_DEATH, deathCause);
     }
 
     private void notifyFlag(PuzzleFlag flag, PuzzleFlag deathCause) {

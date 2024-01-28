@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: TestJoke 2
+  m_Name: TEST 3
   m_EditorClassIdentifier: Assembly-CSharp::JokeSO
-  yarnNodeName: TEST2
-  dialogueDuration: 15
-  dialogueClip: {fileID: 0}
-  punchlineBufferTime: 5
+  yarnNodeName: TEST3
+  dialogueDuration: 8
+  dialogueClip: {fileID: 8300000, guid: 816844416a7db3c429c1bfe31fd05a79, type: 3}
+  punchlineBufferTime: 3
