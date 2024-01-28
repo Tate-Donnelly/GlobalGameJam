@@ -27,7 +27,7 @@ public class Flashlight : Tool
             out hit, Mathf.Infinity, mask)) {
             return false;
         }
-        Debug.DrawLine(position, hit.transform.position, Color.white, 10.0f, true);
+        Debug.DrawLine(position, hit.point, Color.white, 10.0f, true);
         return hit.transform.gameObject == dickyTransform.gameObject;
     }
 
@@ -61,6 +61,7 @@ public class Flashlight : Tool
     void Update() {
         if (!flashlightOn) return;
         if (checkDickySeesLight()) {
+            Debug.Log("Killed");
             FlagSystem.KillPlayer(PuzzleFlag.KEY);
         }
     }
