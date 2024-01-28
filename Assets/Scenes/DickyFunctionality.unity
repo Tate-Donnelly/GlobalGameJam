@@ -10427,7 +10427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5541929827985889908, guid: 5d57e52a3860c994cbd9de68ce31b72a, type: 3}
       propertyPath: recordingSettings.deviceName
-      value: Microphone
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5875598290190091563, guid: 5d57e52a3860c994cbd9de68ce31b72a, type: 3}
       propertyPath: generalSettings.autoStart
