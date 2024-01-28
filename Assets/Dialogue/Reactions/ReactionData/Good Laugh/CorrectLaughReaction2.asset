@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5ee8af580e64b51ac0285e6953210e1, type: 3}
-  m_Name: SpotlightReaction
+  m_Name: CorrectLaughReaction2
   m_EditorClassIdentifier: 
-  yarnNodeName: 
-  dialogueDuration: 0
-  dialogueClip: {fileID: 0}
+  yarnNodeName: CorrectLaughReaction2
+  dialogueDuration: 10
+  dialogueClip: {fileID: 8300000, guid: 53f28fc31a61a514281d42fc3b24e513, type: 3}

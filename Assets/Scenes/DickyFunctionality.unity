@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -359,17 +359,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2492621808693234820, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
   m_PrefabInstance: {fileID: 123842998}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &123843000 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2782325016110408187, guid: 0edc8469ef6f89d4d992538998ba4813, type: 3}
-  m_PrefabInstance: {fileID: 123842998}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &191809788
 GameObject:
   m_ObjectHideFlags: 0
@@ -10478,174 +10467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2531148262781083618, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: dialogueRunner
-      value: 
-      objectReference: {fileID: 123843000}
-    - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: onLaughedDuringPunchline.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1982916074}
-    - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: onLaughedOutsidePunchline.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1687355063}
-    - target: {fileID: 6788258444023213857, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 58aa8b1c63a25834f90b5a24af9e6ef8, type: 3}
-    - target: {fileID: 6788258444023213857, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7780946087657316706, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: m_Name
       value: Dicky
       objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _dialogueRunner
-      value: 
-      objectReference: {fileID: 123843000}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 3f23cdadf59fa5a45866ad6b7b2acf70, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: ca80193705913da418bad2c79377c96e, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: d4ab260562a78b8429af502277c7a584, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.data[0].jokeList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Key
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Key
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Key
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[3].Key
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[4].Key
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[5].Key
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[6].Key
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[7].Key
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[8].Key
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionDialogue.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[3].Value.reactionDialogue.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[4].Value.reactionDialogue.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionDialogue.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6f4fb0d296ea5104fa922217930e7f39, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionDialogue.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: c0eaedeb83cc99f4bb8bddf2c284f71b, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionDialogue.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: a7d81bbbbacced94e82435034f60518d, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c7e6becdd0ac48b40892a96e801d20ff, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8346a167b4c4bd44ba245040206fca23, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 21a5985b0690b3c4cbe5eba7cc49e088, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: a387d47e64c63db4d88386c3bd7ba4a5, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 336c398167728bd4bb0ae0d182492b7b, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: d219197d7752fec4b9e306b658d3245c, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: ab1e40dd76d96184a896bb32606ddb7a, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: da07283e9f99736449a496fa5fa687a3, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: da7e2f7c0247adf42be6ad1fe1f02049, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 122b3e99f84b9494ead1aa5dd67b4f03, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[4].Value.reactionDialogue.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: bac1062389bc06043ad1c11501e35ed5, type: 2}
     - target: {fileID: 9146183419294275928, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: m_RootOrder
       value: 2

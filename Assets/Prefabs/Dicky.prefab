@@ -198,12 +198,13 @@ MonoBehaviour:
         - {fileID: 11400000, guid: a387d47e64c63db4d88386c3bd7ba4a5, type: 2}
         - {fileID: 11400000, guid: 336c398167728bd4bb0ae0d182492b7b, type: 2}
         - {fileID: 11400000, guid: d219197d7752fec4b9e306b658d3245c, type: 2}
+        - {fileID: 11400000, guid: 33b6322cc49fa9341b2417bd53477efb, type: 2}
     - Key: 4
       Value:
         reactionDialogue:
-        - {fileID: 11400000, guid: ab1e40dd76d96184a896bb32606ddb7a, type: 2}
         - {fileID: 11400000, guid: da07283e9f99736449a496fa5fa687a3, type: 2}
-        - {fileID: 11400000, guid: da7e2f7c0247adf42be6ad1fe1f02049, type: 2}
+        - {fileID: 11400000, guid: ab1e40dd76d96184a896bb32606ddb7a, type: 2}
+        - {fileID: 11400000, guid: a7d81bbbbacced94e82435034f60518d, type: 2}
     - Key: 0
       Value:
         reactionDialogue: []
