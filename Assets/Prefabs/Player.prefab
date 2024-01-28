@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5561083590199137269}
   - component: {fileID: 6194867034839822391}
   - component: {fileID: 4330566080127773518}
+  - component: {fileID: 7758725190709918791}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -92,6 +93,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7012647886375840285}
   m_Enabled: 1
+--- !u!114 &7758725190709918791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012647886375840285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38db15f6264c1364aa8d832bafa44915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 759c05e0d18bdcc44928a1cb36026c39, type: 2}
 --- !u!1 &8958000319674775305
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +290,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: da06c86f-143d-43ce-8f0b-005ea8eaf599
     m_ActionName: gameplay/interact[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 98e22c33-df25-47ac-8d3d-b9ff058d9bca
+    m_ActionName: gameplay/manuallaugh[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: gameplay
