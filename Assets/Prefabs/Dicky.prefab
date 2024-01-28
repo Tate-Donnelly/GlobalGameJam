@@ -183,16 +183,48 @@ MonoBehaviour:
   timeBetweenJokes: 5
   _reactionsToPlayer:
     _serializedList:
-    - Key: 1
-      Value: {fileID: 11400000, guid: 549b6e13be1d94648bbeab587fb3b219, type: 2}
-    - Key: 0
-      Value: {fileID: 11400000, guid: e5baef141699ee84e82138a76b3879a9, type: 2}
+    - Key: 3
+      Value:
+        reactionDialogue:
+        - {fileID: 11400000, guid: 6f4fb0d296ea5104fa922217930e7f39, type: 2}
+        - {fileID: 11400000, guid: c0eaedeb83cc99f4bb8bddf2c284f71b, type: 2}
+        - {fileID: 11400000, guid: a7d81bbbbacced94e82435034f60518d, type: 2}
     - Key: 2
-      Value: {fileID: 11400000, guid: 978d471851f3bfd45917bb52fdd95950, type: 2}
+      Value:
+        reactionDialogue:
+        - {fileID: 11400000, guid: c7e6becdd0ac48b40892a96e801d20ff, type: 2}
+        - {fileID: 11400000, guid: 8346a167b4c4bd44ba245040206fca23, type: 2}
+        - {fileID: 11400000, guid: 21a5985b0690b3c4cbe5eba7cc49e088, type: 2}
+        - {fileID: 11400000, guid: a387d47e64c63db4d88386c3bd7ba4a5, type: 2}
+        - {fileID: 11400000, guid: 336c398167728bd4bb0ae0d182492b7b, type: 2}
+        - {fileID: 11400000, guid: d219197d7752fec4b9e306b658d3245c, type: 2}
+    - Key: 4
+      Value:
+        reactionDialogue:
+        - {fileID: 11400000, guid: ab1e40dd76d96184a896bb32606ddb7a, type: 2}
+        - {fileID: 11400000, guid: da07283e9f99736449a496fa5fa687a3, type: 2}
+        - {fileID: 11400000, guid: da7e2f7c0247adf42be6ad1fe1f02049, type: 2}
+    - Key: 0
+      Value:
+        reactionDialogue: []
+    - Key: 1
+      Value:
+        reactionDialogue:
+        - {fileID: 11400000, guid: bac1062389bc06043ad1c11501e35ed5, type: 2}
+    - Key: 5
+      Value:
+        reactionDialogue: []
+    - Key: 6
+      Value:
+        reactionDialogue: []
+    - Key: 7
+      Value:
+        reactionDialogue: []
+    - Key: 8
+      Value:
+        reactionDialogue: []
   _unusedJokes:
-  - {fileID: 11400000, guid: b679692def29dcb4e8b7fecd52fa0bd6, type: 2}
-  - {fileID: 11400000, guid: 23e01e924de19e142963ffe9a1788cd7, type: 2}
-  - {fileID: 11400000, guid: 9b7bf9f35781d5640a245ed8beb45b15, type: 2}
+  - {fileID: 11400000, guid: 3f23cdadf59fa5a45866ad6b7b2acf70, type: 2}
   _usedJokes: []
 --- !u!114 &3475763697308147046
 MonoBehaviour:
@@ -627,6 +659,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100312155356478718, guid: 49fa24d5cfa1e124c81a68fee5277d62, type: 3}
       propertyPath: lockX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692606442953405210, guid: 49fa24d5cfa1e124c81a68fee5277d62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58aa8b1c63a25834f90b5a24af9e6ef8, type: 3}
+    - target: {fileID: 7692606442953405210, guid: 49fa24d5cfa1e124c81a68fee5277d62, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
