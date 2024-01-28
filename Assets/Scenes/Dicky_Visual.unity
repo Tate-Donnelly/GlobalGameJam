@@ -198,11 +198,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dfb1bc3d7faa31c43ae17f9f75c9083b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -646,10 +646,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ff1cd8d039ceb429e9b44d9e93fdf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 0}
-  talkSprite: {fileID: 0}
-  madSprite: {fileID: 0}
-  knockedOutSprite: {fileID: 0}
+  idleSprite: {fileID: 21300000, guid: 107f3540129b87d4a90ce0d79909d3c5, type: 3}
+  talkSprite: {fileID: 21300000, guid: 222f1076997661740bfc7a7cd7e488d5, type: 3}
+  madSprite: {fileID: 21300000, guid: fe2c4bf22d43826488b34c8754e10530, type: 3}
+  knockedOutSprite: {fileID: 21300000, guid: 507fad914490cd24687ec05eedbf961f, type: 3}
 --- !u!95 &1643905449
 Animator:
   serializedVersion: 5
@@ -768,7 +768,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 1.44, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -885,7 +885,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
