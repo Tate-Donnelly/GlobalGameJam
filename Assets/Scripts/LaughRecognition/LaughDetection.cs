@@ -88,9 +88,11 @@ public class LaughDetection : MonoBehaviour
     {
         hasLaughed = false;
         currentJoke = joke;
-        UpdateStatus("");
-        punchlineStartTime = DateTime.Now;
-        punchlineTimer = currentJoke.punchlineBufferTime;
+        capturedResponses = new List<CapturedPlayerResponse>();
+    }
+    
+    public void RunPunchline()
+    {
         punchlineStartTime = DateTime.Now;
         punchlineTimer = currentJoke.punchlineBufferTime;
     }
@@ -121,7 +123,6 @@ public class LaughDetection : MonoBehaviour
         });
         activityDetector.StartProcessing();
     }
-    #endregion
 
 
     private void CheckIfLaugh(CapturedPlayerResponse response)
