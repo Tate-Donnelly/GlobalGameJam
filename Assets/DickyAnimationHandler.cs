@@ -27,12 +27,13 @@ public class DickyAnimationHandler : MonoBehaviour
     {
         if (dialogueRunner == null) return;
 
-        dialogueRunner.AddCommandHandler("ChangeSprite", (string spriteString) => ChangeSprite(spriteString));
+        /*dialogueRunner.AddCommandHandler("ChangeSprite", (string spriteString) => ChangeSprite(spriteString));
         dialogueRunner.AddCommandHandler("PlayEffect", (string effectString) => ChangeSprite(effectString));
-        dialogueRunner.AddCommandHandler("PlayStatus", (string statusString) => ChangeSprite(statusString));
+        dialogueRunner.AddCommandHandler("PlayStatus", (string statusString) => ChangeSprite(statusString));*/
     }
 
     //Using strings here for yarnspinner
+    [YarnCommand("ChangeSprite")]
     public void ChangeSprite(string spriteString)
     {
         switch(spriteString)
@@ -52,6 +53,7 @@ public class DickyAnimationHandler : MonoBehaviour
         }
     }
 
+    [YarnCommand("PlayEffect")]
     public void PlayEffect(string effectString)
     {
         switch (effectString)
@@ -77,6 +79,7 @@ public class DickyAnimationHandler : MonoBehaviour
         }
     }
 
+    [YarnCommand("PlayStatus")]
     public void PlayStatus(string statusString)
     {
         switch (statusString)

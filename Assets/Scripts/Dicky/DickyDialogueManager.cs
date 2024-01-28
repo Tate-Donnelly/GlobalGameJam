@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Dialogue;
 using UnityEngine;
+using Yarn;
 using Yarn.Unity;
 using Random=System.Random;
 
@@ -18,12 +19,14 @@ namespace Dicky
 
         [Header("Dialogue")] 
         [SerializeField] private AYellowpaper.SerializedCollections.SerializedDictionary<Reaction, DickyReaction> _reactionsToPlayer=new AYellowpaper.SerializedCollections.SerializedDictionary<Reaction, DickyReaction>();
-        [SerializeField] private List<JokeSO> _unusedJokes = new List<JokeSO>();
-        [SerializeField] private List<JokeSO> _usedJokes = new List<JokeSO>();
+
+        [SerializeField] private List<JokeGroup> _unusedJokes = new List<JokeGroup>();
+        [SerializeField] private List<JokeGroup> _usedJokes = new List<JokeGroup>();
         
         //Internal
         private Queue<Reaction> reactionQue = new Queue<Reaction>();
         private DialogueSO _currentDialogueData;
+        private JokeGroup _currentJokeGroup;
         private float dialoguePauseTimer;
         private float dialogueTimer;
         private float laughterTimer;
@@ -46,40 +49,56 @@ namespace Dicky
             FlagSystem.instance.OnFlagNotifiedUnityEvent.AddListener(FlagUpdate);
 
             _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
-
-            PlayRandomJoke();
+            _dialogueRunner.AddCommandHandler("PlayRandomJoke", (GameObject target) => { PlayRandomJoke(); });
+            _dialogueRunner.AddCommandHandler("StartRoutine", (GameObject target) => { StartCoroutine(StartRoutineIEnumerator());; });
+            _dialogueRunner.AddCommandHandler("KillPlayer", (GameObject target) => { KillPlayer(); });
+            
+            _dialogueRunner.StartDialogue("Dicky_Intro");
         }
 
         private void Update()
         {
             if(stopTellingJokes) return;
-            if (dialoguePauseTimer > 0)
-            {
-                dialoguePauseTimer -= Time.deltaTime;
-                if (dialoguePauseTimer <= 0) PlayRandomJoke();
-            }
         }
 
         #region Play Dialogue
-
+        
+        private IEnumerator StartRoutineIEnumerator()
+        {
+            yield return new WaitWhile(()=>_dialogueRunner.IsDialogueRunning);
+            PlayRandomJoke();
+        }
+        
         /// <summary>
         /// Set a random joke from _unusedJokes to _currentJokeData.
         /// If there are no unused jokes left, set the list to _usedJokes
         /// </summary>
+        [YarnCommand("PlayRandomJoke")]
         private void PlayRandomJoke()
         {
+            if(stopTellingJokes) return;
             Random rand = new Random();
             int index = rand.Next(0, _unusedJokes.Count);
-            _laughDetection.RunJoke(_unusedJokes[index]);
-            PlayDialogue(_unusedJokes[index]);
+            _currentJokeGroup = _unusedJokes[index];
+
+            JokeSO jokeData = _currentJokeGroup.GetNextJoke();
+            _laughDetection.RunJoke(jokeData);
+            PlayDialogue(jokeData);
             StartCoroutine(WaitForJokeToEnd());
             
-            laughterTimer = _unusedJokes[index].dialogueDuration;
+            laughterTimer = jokeData.dialogueDuration;
             if (_unusedJokes.Count == 1)
             {
                 _unusedJokes.AddRange(_usedJokes);
                 _usedJokes.Clear();
             }
+        }
+
+        private void PlayNextGroupJoke(JokeSO joke)
+        {
+            if(stopTellingJokes) return;
+            PlayDialogue(joke);
+            StartCoroutine(WaitForJokeToEnd());
         }
 
         private void PlayDialogue(DialogueSO dialogueSo)
@@ -96,6 +115,12 @@ namespace Dicky
 
 
         #region React to Player
+        
+        private void KillPlayer()
+        {
+            CutOffDialogue();
+            FlagSystem.KillPlayer(PuzzleFlag.NONE);
+        }
 
         public void QueueReaction(Reaction reaction)
         {
@@ -118,8 +143,8 @@ namespace Dicky
         private IEnumerator WaitForJokeToEnd()
         {
             yield return new WaitUntil(() => !_dialogueRunner.IsDialogueRunning);
-            _unusedJokes.Remove(_currentDialogueData as JokeSO);
-            _usedJokes.Add(_currentDialogueData as JokeSO);
+            _unusedJokes.Remove(_currentJokeGroup);
+            _usedJokes.Add(_currentJokeGroup);
             if (_unusedJokes.Count == 0)
             {
                 _unusedJokes = _usedJokes;
@@ -148,7 +173,15 @@ namespace Dicky
             yield return new WaitUntil(() => !_dialogueRunner.IsDialogueRunning);
             // TODO: Check Flags for player death
             if(stopTellingJokes) StopDialogue();
-            dialoguePauseTimer = timeBetweenJokes;
+
+            if (_currentJokeGroup.HasMoreJokes())
+            {
+                PlayNextGroupJoke(_currentJokeGroup.GetNextJoke());
+            }
+            else
+            {
+                PlayRandomJoke();
+            }
         }
 
         private void FlagUpdate(FlagArgs flagArgs)
@@ -189,6 +222,7 @@ namespace Dicky
 
         public void CutOffDialogue()
         {
+            dlgAudioSource.loop = false;
             stopTellingJokes = true;
             dlgAudioSource.Stop();
             _dialogueRunner.Stop();

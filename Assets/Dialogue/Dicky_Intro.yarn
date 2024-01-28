@@ -27,5 +27,5 @@ Dicky: Try anything or mess up your cue, and you know exactly what’s coming, b
 Dicky: So. Shall we get on with the show?
 
 <<ChangeSprite Dicky_Obj Idle>>
-
+<<StartRoutine Dicky>>
 ===

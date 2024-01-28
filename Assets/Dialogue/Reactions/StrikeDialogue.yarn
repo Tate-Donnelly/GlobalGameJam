@@ -1,0 +1,93 @@
+﻿title: IncorrectLaughReaction1
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+Hey now! Hey now! It’s a comedy show! You have to laugh at the right time!
+
+Maybe you just didn’t get it. I’ll let it slide just this once. Just this once.
+
+Don’t screw up again! Alright?
+===
+
+title: IncorrectLaughReaction2
+tags:
+---
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+Did you not hear what I said? Laugh. When. It’s. Time. To. Laugh.
+
+It’s that freaking simple! I swear, one more time and you’ll end up like the rest!
+
+===
+
+title: GameOver
+tags:
+---
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+You’re all the same! All the same! You’re done! Done! AGH!
+<<KillPlayer Dicky>>
+===
+
+title: NoLaughReaction1
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+Not even a chuckle? Can't you laugh properly?
+
+Maybe you just didn’t get it. I’ll let it slide just this once. Just this once.
+
+Don’t screw up again! Alright?
+===
+
+title: NoLaughReaction2
+tags:
+---
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj GrowShrink>>
+Are you not able to laugh at all? All you need to say is Ha.Ha.
+
+It’s that freaking simple! I swear, one more time and you’ll end up like the rest!
+===
+
+title: CorrectLaughReaction1
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Shrink>>
+Awww, you're too nice.
+===
+
+title: CorrectLaughReaction2
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Shrink>>
+Wow, you actually found that funny!
+===
+
+title: CorrectLaughReaction3
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Shrink>>
+That didn't sound phoned in at all!
+===
+
+title: CorrectLaughReaction4
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Shrink>>
+Finally, someone appreciates true humor.
+===
+
+title: CorrectLaughReaction5
+tags:
+---
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Shrink>>
+You're so sweet, i'm going to cry...
+===

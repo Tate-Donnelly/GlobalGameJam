@@ -984,12 +984,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnProject: {fileID: 0}
+  yarnProject: {fileID: 7545569452688597077, guid: 7decb8b110c609440992f99f31db1d16, type: 3}
   _variableStorage: {fileID: 5326873678471071468}
   dialogueViews:
   - {fileID: 5756265306416826112}
   - {fileID: 9178240480010019898}
-  startNode: Start
+  startNode: Intro
   startAutomatically: 1
   runSelectedOptionAsLine: 0
   lineProvider: {fileID: 0}

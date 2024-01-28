@@ -18,8 +18,10 @@ Dicky: Honestly, someone should just go down there and SWOOSH!
 
 <<ChangeSprite Dicky_Obj Talk>>
 <<PlayEffect Dicky_Obj Still>>
+<<PlayEffect Dicky_Obj Sway>>
 <<Punchline Dicky>>
 Dicky: Just clean the streets, you know what I’m saying? Haha!
+
 
 <<ChangeSprite Dicky_Obj Idle>>
 

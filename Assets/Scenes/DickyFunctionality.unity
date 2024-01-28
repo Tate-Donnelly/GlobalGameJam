@@ -10478,18 +10478,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2531148262781083618, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: dialogueRunner
-      value: 
-      objectReference: {fileID: 123843000}
-    - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: onLaughedDuringPunchline.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1982916074}
-    - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: onLaughedOutsidePunchline.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1687355063}
     - target: {fileID: 7780946087657316706, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: m_Name
       value: Dicky
@@ -10498,94 +10486,6 @@ PrefabInstance:
       propertyPath: _dialogueRunner
       value: 
       objectReference: {fileID: 123843000}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 064ae92e7309b5045854f5271f13c55d, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: ca80193705913da418bad2c79377c96e, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _unusedJokes.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: d4ab260562a78b8429af502277c7a584, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Key
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Key
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Key
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[3].Key
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[4].Key
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[5].Key
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[6].Key
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[7].Key
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[8].Key
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionDialogue.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[0].Value.reactionDialogue.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: a7d81bbbbacced94e82435034f60518d, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: d219197d7752fec4b9e306b658d3245c, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[1].Value.reactionDialogue.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 33b6322cc49fa9341b2417bd53477efb, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: da7e2f7c0247adf42be6ad1fe1f02049, type: 2}
-    - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
-      propertyPath: _reactionsToPlayer._serializedList.Array.data[2].Value.reactionDialogue.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8e6a77ac698fff549bd3f52c18c9fe61, type: 2}
     - target: {fileID: 9146183419294275928, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: m_RootOrder
       value: 2
