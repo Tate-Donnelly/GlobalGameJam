@@ -1,0 +1,69 @@
+﻿title: Dicky_Joke_01
+//one joke in Dicky’s full routine, each joke is modularized into an individual node
+//possible punchlines are bolded and in red
+---
+
+<<ChangeSprite Talk>>
+Dicky: Alright, alright.
+
+Dicky: So I was walking down Lewis Street, right?
+
+Dicky: And you know how Lewis Street is, it’s a wild show of hobos and rats, right?
+
+<<ChangeSprite Mad>>
+Dicky: It actually is a disgrace to the city, no joke.
+
+<<PlayEffect Jump>>
+Dicky: Honestly, someone should just go down there and SWOOSH!
+
+
+<<ChangeSprite Talk>>
+<<PlayEffect Still>>
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: Just clean the streets, you know what I’m saying? Haha!
+
+<<CueLaugh false>>
+
+Dicky: Anyway, do you know what Lewis Street was called before it was called Lewis Street?
+
+Dicky: Crack Street!
+
+Dicky: Take a guess at why the city decided to name a street Crack Street.
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: No, no, get your head out of the gutter. Not that!
+
+<<CueLaugh false>>
+
+Dicky: C’mon now, have some faith! Haha!
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: It was cuz every time you walk down that street, you only saw the buttcracks of hobos!
+
+<<CueLaugh false>>
+
+Dicky: Honestly, honestly, it’s clear that the street was always a problem right?
+
+Dicky: It’s honestly a shame they put the best spaghetti place in the city on Crack Street.
+
+Dicky: You ever been there? It’s a place called Slice n’ Dice.
+
+Dicky: It’s an odd name, I admit, I admit.
+
+Dicky: But honest to God. I’ve never seen a meat delivery truck go to that pizza place.
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: I guess we know where Slice n’ Dice is collecting their meatballs, huh? Haha!
+
+<<Punchline Dicky>>
+Dicky: Looks like someone got to cleaning the streets, huh? Haha!
+
+<<CueLaugh false>>
+
+<<ChangeSprite Idle>>
+
+===

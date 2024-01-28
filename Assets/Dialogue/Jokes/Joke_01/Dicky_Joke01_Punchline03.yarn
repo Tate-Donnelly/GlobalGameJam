@@ -1,0 +1,17 @@
+﻿title: Dicky_Joke01_Punchline03
+tags:
+---
+
+<<ChangeSprite Talk>>
+
+Dicky: C’mon now, have some faith! Haha!
+
+<<Punchline Dicky>>
+<<CueLaugh true>>
+Dicky: It was cuz every time you walk down that street, you only saw the buttcracks of hobos!
+
+<<CueLaugh false>>
+
+<<ChangeSprite Idle>>
+
+===

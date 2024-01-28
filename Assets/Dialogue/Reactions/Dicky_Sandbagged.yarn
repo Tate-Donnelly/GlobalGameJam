@@ -1,0 +1,14 @@
+﻿title: Dicky_Sandbagged
+//Trigger: player unleashes the sandbags onto Dicky
+---
+
+<<ChangeSprite Talk>>
+<<PlayEffect Shrink>>
+
+Dicky: Well, that’s not supposed to–
+
+<<PlayEffect Still>>
+<<ChangeSprite KnockedOut>>
+
+===
+
