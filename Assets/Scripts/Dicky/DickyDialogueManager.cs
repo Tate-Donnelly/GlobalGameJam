@@ -29,7 +29,7 @@ namespace Dicky
         private bool didLaugh;
         private bool stopTellingJokes;
         
-        private void Awake()
+        private void Start()
         {
             //Event Subscribing
             _laughDetection.onLaughedDuringPunchline.AddListener(delegate
