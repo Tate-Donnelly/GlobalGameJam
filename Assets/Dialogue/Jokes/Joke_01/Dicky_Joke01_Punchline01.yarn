@@ -2,28 +2,26 @@
 tags:
 ---
 
-<<ChangeSprite Talk>>
+<<ChangeSprite Dicky_Obj Talk>>
 Dicky: Alright, alright.
 
 Dicky: So I was walking down Lewis Street, right?
 
 Dicky: And you know how Lewis Street is, it’s a wild show of hobos and rats, right?
 
-<<ChangeSprite Mad>>
+<<ChangeSprite Dicky_Obj Mad>>
 Dicky: It actually is a disgrace to the city, no joke.
 
-<<PlayEffect Jump>>
+<<PlayEffect Dicky_Obj Jump>>
 Dicky: Honestly, someone should just go down there and SWOOSH!
 
 
-<<ChangeSprite Talk>>
-<<PlayEffect Still>>
+<<ChangeSprite Dicky_Obj Talk>>
+<<PlayEffect Dicky_Obj Still>>
 <<Punchline Dicky>>
-<<CueLaugh true>>
 Dicky: Just clean the streets, you know what I’m saying? Haha!
 
-<<CueLaugh false>>
 
-<<ChangeSprite Idle>>
+<<ChangeSprite Dicky_Obj Idle>>
 
 ===

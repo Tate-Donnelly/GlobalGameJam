@@ -49,23 +49,25 @@ namespace Dicky
 
             _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
             _dialogueRunner.AddCommandHandler("PlayRandomJoke", (GameObject target) => { PlayRandomJoke(); });
+            _dialogueRunner.AddCommandHandler("StartRoutine", (GameObject target) => { StartCoroutine(StartRoutineIEnumerator());; });
 
             //PlayRandomJoke();
-            _dialogueRunner.StartDialogue("Intro");
+            _dialogueRunner.StartDialogue("Dicky_Intro");
         }
 
         private void Update()
         {
             if(stopTellingJokes) return;
-            //if (dialoguePauseTimer > 0)
-            //{
-            //    dialoguePauseTimer -= Time.deltaTime;
-            //    if (dialoguePauseTimer <= 0) PlayRandomJoke();
-            //}
         }
 
         #region Play Dialogue
-
+        
+        private IEnumerator StartRoutineIEnumerator()
+        {
+            yield return new WaitWhile(()=>_dialogueRunner.IsDialogueRunning);
+            PlayRandomJoke();
+        }
+        
         /// <summary>
         /// Set a random joke from _unusedJokes to _currentJokeData.
         /// If there are no unused jokes left, set the list to _usedJokes

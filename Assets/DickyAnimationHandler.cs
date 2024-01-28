@@ -27,9 +27,9 @@ public class DickyAnimationHandler : MonoBehaviour
     {
         if (dialogueRunner == null) return;
 
-        dialogueRunner.AddCommandHandler("ChangeSprite", (string spriteString) => ChangeSprite(spriteString));
+        /*dialogueRunner.AddCommandHandler("ChangeSprite", (string spriteString) => ChangeSprite(spriteString));
         dialogueRunner.AddCommandHandler("PlayEffect", (string effectString) => ChangeSprite(effectString));
-        dialogueRunner.AddCommandHandler("PlayStatus", (string statusString) => ChangeSprite(statusString));
+        dialogueRunner.AddCommandHandler("PlayStatus", (string statusString) => ChangeSprite(statusString));*/
     }
 
     //Using strings here for yarnspinner

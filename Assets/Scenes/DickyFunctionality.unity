@@ -10500,12 +10500,12 @@ PrefabInstance:
       objectReference: {fileID: 123843000}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _unusedJokes.Array.size
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _unusedJokes.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 064ae92e7309b5045854f5271f13c55d, type: 2}
+      objectReference: {fileID: 11400000, guid: 3f23cdadf59fa5a45866ad6b7b2acf70, type: 2}
     - target: {fileID: 8458904473239876122, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: _unusedJokes.Array.data[1]
       value: 

@@ -6,8 +6,6 @@ tags:
 <<Punchline Dicky>>
 Dicky: Looks like someone got to cleaning the streets, huh? Haha!
 
-<<CueLaugh false>>
-
-<<ChangeSprite Idle>>
+<<ChangeSprite  Dicky_Obj Idle>>
 
 ===
