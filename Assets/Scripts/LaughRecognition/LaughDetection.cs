@@ -8,6 +8,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+/// <summary>
+/// Detects laughter from voice speech in combo with voice response.
+/// Also verifies a laugh was made during the punchline time.
+/// </summary>
 public class LaughDetection : MonoBehaviour
 {
     private readonly RecognizedText _recognizedText = new();
@@ -36,12 +40,11 @@ public class LaughDetection : MonoBehaviour
     [SerializeField] private List<string> possibleLaughs;
     private JokeSO currentJoke;
     private bool speechRunning;
-    private bool laughedDuringPunchline;
     private float responseDelayBuffer = 0;
 
     //Timer
-    private float jokeTimer;
-    private DateTime jokeStartTime;
+    private float punchlineTimer;
+    private DateTime punchlineStartTime;
 
     //Responses
     private CapturedPlayerResponse currentResponse = null;
@@ -78,18 +81,19 @@ public class LaughDetection : MonoBehaviour
 
     private void Update()
     {
-        if(jokeTimer > 0)
+        if(punchlineTimer > 0)
         {
-            jokeTimer -= Time.deltaTime;
+            punchlineTimer -= Time.deltaTime;
         }
     }
 
+    #region Initialization
     public void RunJoke(JokeSO joke)
     {
         currentJoke = joke;
         UpdateStatus("");
-        jokeStartTime = DateTime.Now;
-        jokeTimer = currentJoke.jokeDuration;
+        punchlineStartTime = DateTime.Now;
+        punchlineTimer = currentJoke.punchlineBufferTime;
         capturedResponses = new List<CapturedPlayerResponse>();
     }
 
@@ -124,6 +128,7 @@ public class LaughDetection : MonoBehaviour
         activityDetector.InitializationFailed.AddListener(e => hearStatus.text = e.Message);
         activityDetector.StartProcessing();
     }
+    #endregion
 
     private void CheckIfLaugh(CapturedPlayerResponse response)
     {
@@ -131,22 +136,29 @@ public class LaughDetection : MonoBehaviour
         {
             if (response.responseText.Contains(laugh))
             {
-                float responseTime = (float)(response.startTime - jokeStartTime).TotalSeconds - responseDelayBuffer;
-                if (responseTime >= currentJoke.punchlineRange[0] && responseTime <= currentJoke.punchlineRange[1])
-                {
-                    laughedDuringPunchline = true;
-                    onLaughedDuringPunchline?.Invoke();
-                }
-
-                if (responseTime < currentJoke.punchlineRange[0] || responseTime > currentJoke.punchlineRange[1])
-                {
-                    laughedDuringPunchline = false;
-                    onLaughedOutsidePunchline?.Invoke();
-                }
+                OnHasLaughed(response);
                 return;
             }
         }
         onLaughedOutsidePunchline?.Invoke();
+    }
+
+    /// <summary>
+    /// Call this with a player response to determine if we hit the punchline
+    /// </summary>
+    /// <param name="response"></param>
+    public void OnHasLaughed(CapturedPlayerResponse response)
+    {
+        if (currentJoke == null) return;
+
+        if (punchlineTimer > 0)
+        {
+            onLaughedDuringPunchline?.Invoke();
+        }
+        else
+        {
+            onLaughedOutsidePunchline?.Invoke();
+        }
     }
 
     private void UpdateStatus(string text)
