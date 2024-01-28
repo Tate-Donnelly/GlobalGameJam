@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1515134155800802139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
+  m_Name: Dicky_Joke01_Punchline04
+  m_EditorClassIdentifier: 
+  yarnNodeName: Dicky_Joke01_Punchline04
+  dialogueDuration: 10
+  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  punchlineBufferTime: 3
+--- !u!114 &-1372665186156118892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
+  m_Name: Dicky_Joke01_Punchline05
+  m_EditorClassIdentifier: 
+  yarnNodeName: Dicky_Joke01_Punchline05
+  dialogueDuration: 10
+  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  punchlineBufferTime: 3
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a821467df8a02448913923e62e18f1e, type: 3}
+  m_Name: Dicky_Joke01
+  m_EditorClassIdentifier: 
+  jokeGroupName: Dicky_Joke01
+  jokeList:
+  - {fileID: 2718487716402090931}
+  - {fileID: 7781229435700361652}
+  - {fileID: 7483177180521934135}
+  - {fileID: -1515134155800802139}
+  - {fileID: -1372665186156118892}
+--- !u!114 &2718487716402090931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
+  m_Name: Dicky_Joke01_Punchline01
+  m_EditorClassIdentifier: 
+  yarnNodeName: Dicky_Joke01_Punchline01
+  dialogueDuration: 10
+  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  punchlineBufferTime: 3
+--- !u!114 &7483177180521934135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
+  m_Name: Dicky_Joke01_Punchline03
+  m_EditorClassIdentifier: 
+  yarnNodeName: Dicky_Joke01_Punchline03
+  dialogueDuration: 10
+  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  punchlineBufferTime: 3
+--- !u!114 &7781229435700361652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c0cda53e6e1e4db67708038df9b6e, type: 3}
+  m_Name: Dicky_Joke01_Punchline02
+  m_EditorClassIdentifier: 
+  yarnNodeName: Dicky_Joke01_Punchline02
+  dialogueDuration: 10
+  dialogueClip: {fileID: 8300000, guid: bdde90395765b4607bcda24037f70d24, type: 3}
+  punchlineBufferTime: 3

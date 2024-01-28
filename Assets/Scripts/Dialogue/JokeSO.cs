@@ -7,4 +7,10 @@ using UnityEngine;
 public class JokeSO : DialogueSO
 {
     public float punchlineBufferTime = 1;
+
+    public void Init(string jokeGroup, int index)
+    {
+        name = $"{jokeGroup}_Punchline0{index}";
+        yarnNodeName = name;
+    }
 }
