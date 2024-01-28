@@ -1,0 +1,33 @@
+﻿title: Dicky_Joke07_Punchline01
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Alright. Let me tell you something.
+
+Dicky: Let me tell you about the day that I decided to become a comedian. Made it my life goal.
+
+Dicky: It was a momentous day, a momentous day. 
+
+<<PlayEffect Dicky_Obj Jump>>
+Dicky: The middle school talent show!
+<<PlayEffect Dicky_Obj Still>>
+
+Dicky: I mean, you can already imagine it, right? 
+
+Dicky: A little scrawny kid in suspenders and bowtie about to tell jokes to a bunch of parents, right between one kid who could barely play guitar and one kid who could barely sing.
+
+Dicky: You’d think, if that’s the day I decided to do this for a living, I must have knocked it out of the park!
+
+<<PlayEffect Dicky_Obj Sway>>
+Dicky: Right? Right?
+
+<<ChangeSprite Dicky_Obj Mad>>
+<<PlayEffect Dicky_Obj Jump>>
+<<Punchline Dicky>>
+Dicky: No! A teacher had to pick me up by the suspenders and wedgie me off backstage!
+<<PlayEffect Dicky_Obj Still>>
+<<ChangeSprite Dicky_Obj Idle>>
+
+===

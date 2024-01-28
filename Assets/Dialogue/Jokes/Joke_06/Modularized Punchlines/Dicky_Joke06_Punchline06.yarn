@@ -1,0 +1,16 @@
+﻿title: Dicky_Joke06_Punchline06
+tags:
+---
+
+<<ChangeSprite Dicky_Obj Talk>>
+
+Dicky: Needless to say, not only was I out of a job, I had to cover the man’s medical bills!
+
+Dicky: But let me tell you this, let me tell you this.
+
+<<Punchline Dicky>>
+Dicky: Even if I handed him the wrong tool, how the Hell is it my fault the car radiator ends up on his foot? 
+
+<<ChangeSprite Dicky_Obj Idle>>
+
+===
