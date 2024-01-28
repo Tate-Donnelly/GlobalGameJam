@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Dialogue;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace Dicky
         [SerializeField] private float timeBetweenJokes;
 
         [Header("Dialogue")] 
-        [SerializeField] private AYellowpaper.SerializedCollections.SerializedDictionary<Reaction, ReactionGroupSO> _reactionsToPlayer=new AYellowpaper.SerializedCollections.SerializedDictionary<Reaction, ReactionGroupSO>();
+        [SerializeField] private AYellowpaper.SerializedCollections.SerializedDictionary<Reaction, DickyReaction> _reactionsToPlayer=new AYellowpaper.SerializedCollections.SerializedDictionary<Reaction, DickyReaction>();
         [SerializeField] private List<JokeSO> _unusedJokes = new List<JokeSO>();
         [SerializeField] private List<JokeSO> _usedJokes = new List<JokeSO>();
         
@@ -38,8 +39,9 @@ namespace Dicky
             });
             _laughDetection.onLaughedOutsidePunchline.AddListener(delegate
             {
-                QueueReaction(Reaction.LaughedOutsideOfPunchline);
+                QueueReaction(Reaction.LAUGHED_BEFORE_PUNCHLINE);
             });
+            FlagSystem.instance.OnFlagNotifiedUnityEvent.AddListener(FlagUpdate);
 
             _dialogueRunner.AddCommandHandler("Punchline", (GameObject target) => { Punchline(); });
 
@@ -102,7 +104,7 @@ namespace Dicky
         {
             if (laughterTimer == 0) return;
             laughterTimer = 0;
-            QueueReaction(Reaction.LaughedDuringPunchline);
+            QueueReaction(Reaction.LAUGHED_DURING_PUNCHLINE);
         }
 
         [YarnCommand("Punchline")]
@@ -131,20 +133,40 @@ namespace Dicky
         {
             //Get dialogue based on reaction
             Reaction reaction;
-            if (!_laughDetection.hasLaughed) reaction = Reaction.NoLaughter;
+            if (!_laughDetection.hasLaughed) reaction = Reaction.NO_LAUGHTER;
             else
             {
                 reaction = reactionQue.Dequeue();
                 reactionQue.Clear();
             }
             
-            //TODO Check flags for appropriate reaction
-            _currentDialogueData = _reactionsToPlayer[reaction].GetReaction(0);
+            _currentDialogueData = _reactionsToPlayer[reaction].GetReaction();
             PlayDialogue(_currentDialogueData);
             yield return new WaitUntil(() => !_dialogueRunner.IsDialogueRunning);
             // TODO: Check Flags for player death
             StopDialogue();
             dialoguePauseTimer = timeBetweenJokes;
+        }
+
+        private void FlagUpdate(FlagArgs flagArgs)
+        {
+            switch (flagArgs.flag)
+            {
+                case PuzzleFlag.SWITCH:
+                    // Player turns on spotlight
+                    break;
+                case PuzzleFlag.UNTIE:
+                    // Player unties self
+                    break;
+                case PuzzleFlag.SANDBAG or PuzzleFlag.PLAYER_DEATH:
+                    stopTellingJokes = true;
+                    return;
+                case PuzzleFlag.KEY:
+                    // Player gets Key
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         private void StopDialogue()
@@ -163,10 +185,34 @@ namespace Dicky
         #endregion
     }
 
+    [Serializable]
+    public class DickyReaction
+    {
+        public List<DialogueSO> reactionDialogue=new List<DialogueSO>();
+        private Queue<DialogueSO> reactionQue;
+
+        void Awake()
+        {
+            reactionQue = new Queue<DialogueSO>(reactionDialogue);
+            Debug.Log(reactionQue.Count);
+        }
+
+        public DialogueSO GetReaction()
+        {
+            return reactionQue.Dequeue();
+        }
+    }
+
     public enum Reaction
     {
-        LaughedDuringPunchline,
-        NoLaughter,
-        LaughedOutsideOfPunchline
+        INTRO,
+        SPOTLIGHT_ON,
+        LAUGHED_DURING_PUNCHLINE,
+        NO_LAUGHTER,
+        LAUGHED_BEFORE_PUNCHLINE,
+        PLAYER_CAUGHT_UNTYING,
+        PLAYER_CAUGHT_BY_STAGE,
+        PLAYER_CAUGHT_LEAVING,
+        PLAYER_CAUGHT_FLASHLIGHT
     }
 }

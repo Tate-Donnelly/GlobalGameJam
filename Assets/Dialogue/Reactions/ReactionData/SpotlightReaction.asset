@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6283c4fbc696440ba2500bae70d47986, type: 3}
-  m_Name: Bad Laugh
+  m_Script: {fileID: 11500000, guid: b5ee8af580e64b51ac0285e6953210e1, type: 3}
+  m_Name: SpotlightReaction
   m_EditorClassIdentifier: 
-  reactionDialogue:
-  - {fileID: 11400000, guid: da7e2f7c0247adf42be6ad1fe1f02049, type: 2}
+  yarnNodeName: 
+  dialogueDuration: 0
+  dialogueClip: {fileID: 0}

@@ -214,7 +214,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnPlayerDied(object sender, FlagArgs flagArgs) {
-        if (flagArgs.flag != PuzzleFlag.DEATH) return;
+        if (flagArgs.flag != PuzzleFlag.PLAYER_DEATH) return;
         dead = true;
         StartCoroutine(PlayerDiedCoroutine());
     }

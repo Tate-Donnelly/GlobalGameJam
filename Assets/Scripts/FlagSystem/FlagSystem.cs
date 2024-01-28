@@ -9,7 +9,8 @@ public enum PuzzleFlag {
    UNTIE,
    SANDBAG,
    KEY,
-   DEATH
+   PLAYER_DEATH,
+   PLAYER_ESCAPE
 };
 
 public class FlagArgs : EventArgs {
