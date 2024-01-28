@@ -197,6 +197,7 @@ public class LaughDetection : MonoBehaviour
             capturedResponses.Add(currentResponse);
             CheckIfLaugh(currentResponse);
             onResponseSaved?.Invoke();
+            currentResponse = null;
         }
         _recognizedText.Clear();
         responseRunning = false;

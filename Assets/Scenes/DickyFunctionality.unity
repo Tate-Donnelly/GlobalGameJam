@@ -10394,6 +10394,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: possibleLaughs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: possibleLaughs.Array.data[14]
+      value: huh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
+      propertyPath: possibleLaughs.Array.data[15]
+      value: hoh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375004182839070343, guid: 57ff49b59494a214b97268a4c79dfca4, type: 3}
       propertyPath: onLaughedDuringPunchline.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1982916074}
