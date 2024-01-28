@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: TestJoke 3
-  m_EditorClassIdentifier: Assembly-CSharp::JokeSO
-  yarnNodeName: TEST3
+  m_Script: {fileID: 11500000, guid: b5ee8af580e64b51ac0285e6953210e1, type: 3}
+  m_Name: SpotlightReaction
+  m_EditorClassIdentifier: 
+  yarnNodeName: 
   dialogueDuration: 0
   dialogueClip: {fileID: 0}
-  punchlineBufferTime: 5

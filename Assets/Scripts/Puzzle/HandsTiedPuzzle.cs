@@ -14,6 +14,10 @@ public class HandsTiedPuzzle : MonoBehaviour, IInteractable
         if (type != ToolType.HAND) return;
         if(health < 0)
         {
+            if (!FlagSystem.FlagsNotified.Contains(PuzzleFlag.SWITCH)) {
+                FlagSystem.KillPlayer(PuzzleFlag.UNTIE);
+                return;
+            }
             FlagSystem.NotifyFlag(PuzzleFlag.UNTIE);
             this.gameObject.SetActive(false);
         }
