@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum PuzzleFlag {
    SWITCH,
@@ -68,5 +69,11 @@ public class FlagSystem : MonoBehaviour
         instance = this;
         flagsNotified = new HashSet<PuzzleFlag>();
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += ResetFlags;
+    }
+
+    private void ResetFlags(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        flagsNotified = new HashSet<PuzzleFlag>();
     }
 }

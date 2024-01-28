@@ -6,6 +6,7 @@ using UnityEngine;
 using Yarn;
 using Yarn.Unity;
 using Random=System.Random;
+using UnityEngine.SceneManagement;
 
 namespace Dicky
 {
@@ -120,6 +121,7 @@ namespace Dicky
         {
             CutOffDialogue();
             FlagSystem.KillPlayer(PuzzleFlag.NONE);
+            SceneManager.LoadScene(0);
         }
 
         public void QueueReaction(Reaction reaction)
