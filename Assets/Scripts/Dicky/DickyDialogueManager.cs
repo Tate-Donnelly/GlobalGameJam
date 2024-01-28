@@ -118,6 +118,7 @@ namespace Dicky
         private void KillPlayer()
         {
             CutOffDialogue();
+            FlagSystem.KillPlayer(PuzzleFlag.NONE);
         }
 
         public void QueueReaction(Reaction reaction)
